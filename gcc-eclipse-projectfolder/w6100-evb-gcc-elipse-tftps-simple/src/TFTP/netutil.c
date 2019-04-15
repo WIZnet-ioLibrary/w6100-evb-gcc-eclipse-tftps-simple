@@ -11,10 +11,10 @@
  */
 int8_t* inet_ntoa(uint32_t addr)
 {
-	static int8_t addr_str[16];
-	memset(addr_str,0,16);
-	sprintf((char*)addr_str,"%ld.%ld.%ld.%ld",(int32_t)(addr>>24 & 0xFF),(int32_t)(addr>>16 & 0xFF),(int32_t)(addr>>8 & 0xFF),(int32_t)(addr & 0xFF));
-	return addr_str;
+    static int8_t addr_str[16];
+    memset(addr_str,0,16);
+    sprintf((char*)addr_str,"%ld.%ld.%ld.%ld",(int32_t)(addr>>24 & 0xFF),(int32_t)(addr>>16 & 0xFF),(int32_t)(addr>>8 & 0xFF),(int32_t)(addr & 0xFF));
+    return addr_str;
 }
 
 /**
@@ -26,10 +26,10 @@ int8_t* inet_ntoa(uint32_t addr)
  */
 int8_t* inet_ntoa_pad(uint32_t addr)
 {
-	static int8_t addr_str[16];
-	memset(addr_str,0,16);
-	sprintf((char*)addr_str,"%03ld.%03ld.%03ld.%03ld",(int32_t)(addr>>24 & 0xFF),(int32_t)(addr>>16 & 0xFF),(int32_t)(addr>>8 & 0xFF),(int32_t)(addr & 0xFF));
-	return addr_str;
+    static int8_t addr_str[16];
+    memset(addr_str,0,16);
+    sprintf((char*)addr_str,"%03ld.%03ld.%03ld.%03ld",(int32_t)(addr>>24 & 0xFF),(int32_t)(addr>>16 & 0xFF),(int32_t)(addr>>8 & 0xFF),(int32_t)(addr & 0xFF));
+    return addr_str;
 }
 
 /**
@@ -40,24 +40,24 @@ int8_t* inet_ntoa_pad(uint32_t addr)
  */
 uint32_t inet_addr(uint8_t* addr)
 {
-	int8_t i;
-	uint32_t inetaddr = 0;
-	int8_t taddr[30];
-	int8_t * nexttok;
-	int32_t num;
-	strcpy((char*)taddr,(char*)addr);
-	
-	nexttok = taddr;
-	for(i = 0; i < 4 ; i++)
-	{
-		nexttok = (int8_t*)strtok((char*)nexttok,".");
-		if(nexttok[0] == '0' && nexttok[1] == 'x') num = strtol((char*)nexttok+2, NULL, 16);
-		else num = strtol((char*)nexttok, NULL, 10);
-		inetaddr = inetaddr << 8;		
-		inetaddr |= (num & 0xFF);
-		nexttok = NULL;
-	}
-	return inetaddr;	
+    int8_t i;
+    uint32_t inetaddr = 0;
+    int8_t taddr[30];
+    int8_t * nexttok;
+    int32_t num;
+    strcpy((char*)taddr,(char*)addr);
+
+    nexttok = taddr;
+    for(i = 0; i < 4 ; i++)
+    {
+        nexttok = (int8_t*)strtok((char*)nexttok,".");
+        if(nexttok[0] == '0' && nexttok[1] == 'x') num = strtol((char*)nexttok+2, NULL, 16);
+        else num = strtol((char*)nexttok, NULL, 10);
+        inetaddr = inetaddr << 8;
+        inetaddr |= (num & 0xFF);
+        nexttok = NULL;
+    }
+    return inetaddr;
 }	
 
 /**
@@ -68,10 +68,10 @@ uint32_t inet_addr(uint8_t* addr)
  */
 uint16_t swaps(uint16_t i)
 {
-	uint16_t ret=0;
-	ret = (i & 0xFF) << 8;
-	ret |= ((i >> 8)& 0xFF);
-	return ret;	
+    uint16_t ret=0;
+    ret = (i & 0xFF) << 8;
+    ret |= ((i >> 8)& 0xFF);
+    return ret;
 }
 
 /**
@@ -82,12 +82,12 @@ uint16_t swaps(uint16_t i)
  */
 uint32_t swapl(uint32_t l)
 {
-	uint32_t ret=0;
-	ret = (l & 0xFF) << 24;
-	ret |= ((l >> 8) & 0xFF) << 16;
-	ret |= ((l >> 16) & 0xFF) << 8;
-	ret |= ((l >> 24) & 0xFF);
-	return ret;
+    uint32_t ret=0;
+    ret = (l & 0xFF) << 24;
+    ret |= ((l >> 8) & 0xFF) << 16;
+    ret |= ((l >> 16) & 0xFF) << 8;
+    ret |= ((l >> 24) & 0xFF);
+    return ret;
 }
 
 /**
@@ -99,9 +99,9 @@ uint32_t swapl(uint32_t l)
 uint16_t htons(uint16_t hostshort)
 {
 #ifdef SYSTEM_LITTLE_ENDIAN
-	return swaps(hostshort);
+    return swaps(hostshort);
 #else
-	return hostshort;
+    return hostshort;
 #endif		
 }
 
@@ -115,9 +115,9 @@ uint16_t htons(uint16_t hostshort)
 uint32_t htonl(uint32_t hostlong)
 {
 #ifdef SYSTEM_LITTLE_ENDIAN
-	return swapl(hostlong);
+    return swapl(hostlong);
 #else
-	return hostlong;
+    return hostlong;
 #endif	
 }
 
@@ -132,9 +132,9 @@ uint32_t htonl(uint32_t hostlong)
 uint32_t ntohs(uint16_t netshort)
 {
 #ifdef SYSTEM_LITTLE_ENDIAN
-	return htons(netshort);
+    return htons(netshort);
 #else
-	return netshort;
+    return netshort;
 #endif		
 }
 
@@ -148,9 +148,9 @@ uint32_t ntohs(uint16_t netshort)
 uint32_t ntohl(uint32_t netlong)
 {
 #ifdef SYSTEM_LITTLE_ENDIAN
-	return swapl(netlong);
+    return swapl(netlong);
 #else
-	return netlong;
+    return netlong;
 #endif		
 }
 /**

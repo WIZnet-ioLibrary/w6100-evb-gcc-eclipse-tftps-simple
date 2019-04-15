@@ -110,13 +110,16 @@ __lock___arc4random_mutex
                     0x1               c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-lock.o)
 iana_len            0x2               ./io6Library/Internet/DHCP6/dhcpv6.o
 ValidLifeTime       0x4               ./io6Library/Internet/DHCP6/dhcpv6.o
+ethBuf7             0x400             ./src/main.o
 iaaddr_len          0x2               ./io6Library/Internet/DHCP6/dhcpv6.o
 Enterprise_num_s    0x4               ./io6Library/Internet/DHCP6/dhcpv6.o
+ethBuf1             0x400             ./src/main.o
 errno               0x4               ./system/src/newlib/_syscalls.o
 DMA_RX_InitStructure
                     0x2c              ./src/W6100RelFunctions.o
 recv_IP             0x10              ./io6Library/Internet/DHCP6/dhcpv6.o
 growby              0x4               ./io6Library/Internet/DHCP6/dhcpv6.o
+ethBuf6             0x400             ./src/main.o
 DNS_SOCKET          0x1               ./io6Library/Internet/DNS/dns.o
 clientid_len        0x2               ./io6Library/Internet/DHCP6/dhcpv6.o
 __lock___env_recursive_mutex
@@ -131,24 +134,29 @@ __lock___malloc_recursive_mutex
 DHCP_XID            0x4               ./io6Library/Internet/DHCP6/dhcpv6.o
 PreLifeTime         0x4               ./io6Library/Internet/DHCP6/dhcpv6.o
 Lstatuscode_len     0x2               ./io6Library/Internet/DHCP6/dhcpv6.o
+ethBuf5             0x400             ./src/main.o
 dns_1s_tick         0x4               ./io6Library/Internet/DNS/dns.o
 num                 0x4               ./io6Library/Internet/DHCP6/dhcpv6.o
 DUID_type_s         0x2               ./io6Library/Internet/DHCP6/dhcpv6.o
 T1                  0x4               ./io6Library/Internet/DHCP6/dhcpv6.o
+ethBuf2             0x400             ./src/main.o
 size                0x4               ./io6Library/Internet/DHCP6/dhcpv6.o
 pDHCPMSG            0x4               ./io6Library/Internet/DHCP6/dhcpv6.o
 pDNSMSG             0x4               ./io6Library/Internet/DNS/dns.o
 serverid_len        0x2               ./io6Library/Internet/DHCP6/dhcpv6.o
 statuscode_len      0x2               ./io6Library/Internet/DHCP6/dhcpv6.o
+ethBuf4             0x400             ./src/main.o
 __lock___at_quick_exit_mutex
                     0x1               c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-lock.o)
 code                0x2               ./io6Library/Internet/DHCP6/dhcpv6.o
+ethBuf3             0x400             ./src/main.o
 __lock___dd_hash_mutex
                     0x1               c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-lock.o)
 __lock___tz_mutex   0x1               c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-lock.o)
 DNS_MSGID           0x2               ./io6Library/Internet/DNS/dns.o
 Time_s              0x4               ./io6Library/Internet/DHCP6/dhcpv6.o
 IAID                0x4               ./io6Library/Internet/DHCP6/dhcpv6.o
+ethBuf0             0x400             ./src/main.o
 DHCP_SOCKET         0x1               ./io6Library/Internet/DHCP6/dhcpv6.o
 __lock___sfp_recursive_mutex
                     0x1               c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-lock.o)
@@ -2057,14 +2065,18 @@ Discarded input sections
                 0x00000000        0x2 ./src/TFTP/tftp.o
  .bss.current_opcode
                 0x00000000        0x2 ./src/TFTP/tftp.o
- .bss.destip.5406
+ .bss.destip.5403
                 0x00000000       0x10 ./src/TFTP/tftp.o
- .bss.destport.5407
+ .bss.destport.5404
                 0x00000000        0x2 ./src/TFTP/tftp.o
  .bss.g_progress_state
                 0x00000000        0x1 ./src/TFTP/tftp.o
+ .bss.g_tftp_state
+                0x00000000        0x4 ./src/TFTP/tftp.o
  .data.dbg_level
                 0x00000000        0x4 ./src/TFTP/tftp.o
+ .rodata.tftpc.str1.4
+                0x00000000      0x137 ./src/TFTP/tftp.o
  .debug_macro   0x00000000      0xaa8 ./src/TFTP/tftp.o
  .debug_macro   0x00000000       0x22 ./src/TFTP/tftp.o
  .debug_macro   0x00000000       0x58 ./src/TFTP/tftp.o
@@ -3041,6 +3053,7 @@ Discarded input sections
  .debug_macro   0x00000000      0xcf9 ./src/main.o
  .debug_macro   0x00000000       0x40 ./src/main.o
  .debug_macro   0x00000000       0x97 ./src/main.o
+ COMMON         0x00000000     0x2000 ./src/main.o
  .group         0x00000000        0xc ./src/retarget.o
  .group         0x00000000        0xc ./src/retarget.o
  .group         0x00000000        0xc ./src/retarget.o
@@ -3501,8 +3514,14 @@ Discarded input sections
  .text          0x00000000        0x0 ./io6Library/Ethernet/W6100/w6100.o
  .data          0x00000000        0x0 ./io6Library/Ethernet/W6100/w6100.o
  .bss           0x00000000        0x0 ./io6Library/Ethernet/W6100/w6100.o
+ .text.getSn_TX_FSR
+                0x00000000       0x32 ./io6Library/Ethernet/W6100/w6100.o
+ .text.getSn_RX_RSR
+                0x00000000       0x32 ./io6Library/Ethernet/W6100/w6100.o
  .text.wiz_send_data
                 0x00000000       0x58 ./io6Library/Ethernet/W6100/w6100.o
+ .text.wiz_recv_data
+                0x00000000       0x5c ./io6Library/Ethernet/W6100/w6100.o
  .text.wiz_recv_ignore
                 0x00000000       0x48 ./io6Library/Ethernet/W6100/w6100.o
  .debug_macro   0x00000000      0xaa8 ./io6Library/Ethernet/W6100/w6100.o
@@ -3550,6 +3569,8 @@ Discarded input sections
  .text          0x00000000        0x0 ./io6Library/Ethernet/socket.o
  .data          0x00000000        0x0 ./io6Library/Ethernet/socket.o
  .bss           0x00000000        0x0 ./io6Library/Ethernet/socket.o
+ .text.close    0x00000000       0x78 ./io6Library/Ethernet/socket.o
+ .text.socket   0x00000000      0x224 ./io6Library/Ethernet/socket.o
  .text.listen   0x00000000       0x58 ./io6Library/Ethernet/socket.o
  .text.connect  0x00000000      0x140 ./io6Library/Ethernet/socket.o
  .text.disconnect
@@ -3557,12 +3578,33 @@ Discarded input sections
  .text.send     0x00000000      0x104 ./io6Library/Ethernet/socket.o
  .text.recv     0x00000000       0x90 ./io6Library/Ethernet/socket.o
  .text.sendto   0x00000000      0x14c ./io6Library/Ethernet/socket.o
+ .text.recvfrom
+                0x00000000      0x1d0 ./io6Library/Ethernet/socket.o
  .text.ctlsocket
                 0x00000000      0x138 ./io6Library/Ethernet/socket.o
  .text.setsockopt
                 0x00000000      0x150 ./io6Library/Ethernet/socket.o
+ .text.getsockopt
+                0x00000000      0x244 ./io6Library/Ethernet/socket.o
  .text.peeksockmsg
                 0x00000000       0x8a ./io6Library/Ethernet/socket.o
+ .bss.sock_io_mode
+                0x00000000        0x2 ./io6Library/Ethernet/socket.o
+ .bss.sock_is_sending
+                0x00000000        0x2 ./io6Library/Ethernet/socket.o
+ .bss.sock_pack_info
+                0x00000000        0x8 ./io6Library/Ethernet/socket.o
+ .bss.sock_remained_size
+                0x00000000       0x10 ./io6Library/Ethernet/socket.o
+ .data.sock_any_port
+                0x00000000        0x2 ./io6Library/Ethernet/socket.o
+ .debug_info    0x00000000     0x219a ./io6Library/Ethernet/socket.o
+ .debug_abbrev  0x00000000      0x38b ./io6Library/Ethernet/socket.o
+ .debug_loc     0x00000000     0x1889 ./io6Library/Ethernet/socket.o
+ .debug_aranges
+                0x00000000       0x80 ./io6Library/Ethernet/socket.o
+ .debug_ranges  0x00000000      0x130 ./io6Library/Ethernet/socket.o
+ .debug_macro   0x00000000      0x224 ./io6Library/Ethernet/socket.o
  .debug_macro   0x00000000      0xaa8 ./io6Library/Ethernet/socket.o
  .debug_macro   0x00000000       0x22 ./io6Library/Ethernet/socket.o
  .debug_macro   0x00000000       0x58 ./io6Library/Ethernet/socket.o
@@ -3599,6 +3641,12 @@ Discarded input sections
  .debug_macro   0x00000000       0x40 ./io6Library/Ethernet/socket.o
  .debug_macro   0x00000000       0x97 ./io6Library/Ethernet/socket.o
  .debug_macro   0x00000000      0x140 ./io6Library/Ethernet/socket.o
+ .debug_line    0x00000000     0x14e5 ./io6Library/Ethernet/socket.o
+ .debug_str     0x00000000     0xe61e ./io6Library/Ethernet/socket.o
+ .comment       0x00000000       0x76 ./io6Library/Ethernet/socket.o
+ .debug_frame   0x00000000      0x274 ./io6Library/Ethernet/socket.o
+ .ARM.attributes
+                0x00000000       0x2d ./io6Library/Ethernet/socket.o
  .group         0x00000000        0xc ./io6Library/Ethernet/wizchip_conf.o
  .group         0x00000000        0xc ./io6Library/Ethernet/wizchip_conf.o
  .group         0x00000000        0xc ./io6Library/Ethernet/wizchip_conf.o
@@ -4065,7 +4113,7 @@ END GROUP
                 0x2000bc00                __Main_Stack_Limit = (__stack - __Main_Stack_Size)
                 [!provide]                PROVIDE (_Main_Stack_Limit = __Main_Stack_Limit)
                 0x00000100                _Minimum_Stack_Size = 0x100
-                0x2000023c                PROVIDE (_Heap_Begin = _end_noinit)
+                0x20000204                PROVIDE (_Heap_Begin = _end_noinit)
                 0x2000bc00                PROVIDE (_Heap_Limit = (__stack - __Main_Stack_Size))
 
 .isr_vector     0x08000000      0x428
@@ -4145,16 +4193,16 @@ END GROUP
 
 .inits          0x08000428       0x28
                 0x08000428                __data_regions_array_start = .
-                0x08000428        0x4 LONG 0x8004ee0 LOADADDR (.data)
+                0x08000428        0x4 LONG 0x8004510 LOADADDR (.data)
                 0x0800042c        0x4 LONG 0x20000000 ADDR (.data)
-                0x08000430        0x4 LONG 0x20000130 (ADDR (.data) + SIZEOF (.data))
-                0x08000434        0x4 LONG 0x8004ee0 LOADADDR (.data_CCMRAM)
+                0x08000430        0x4 LONG 0x2000012c (ADDR (.data) + SIZEOF (.data))
+                0x08000434        0x4 LONG 0x8004510 LOADADDR (.data_CCMRAM)
                 0x08000438        0x4 LONG 0x0 ADDR (.data_CCMRAM)
                 0x0800043c        0x4 LONG 0x0 (ADDR (.data_CCMRAM) + SIZEOF (.data_CCMRAM))
                 0x08000440                __data_regions_array_end = .
                 0x08000440                __bss_regions_array_start = .
-                0x08000440        0x4 LONG 0x20000130 ADDR (.bss)
-                0x08000444        0x4 LONG 0x2000023c (ADDR (.bss) + SIZEOF (.bss))
+                0x08000440        0x4 LONG 0x2000012c ADDR (.bss)
+                0x08000444        0x4 LONG 0x20000204 (ADDR (.bss) + SIZEOF (.bss))
                 0x08000448        0x4 LONG 0x0 ADDR (.bss_CCMRAM)
                 0x0800044c        0x4 LONG 0x0 (ADDR (.bss_CCMRAM) + SIZEOF (.bss_CCMRAM))
                 0x08000450                __bss_regions_array_end = .
@@ -4180,7 +4228,7 @@ END GROUP
 .flashtext
  *(.flashtext .flashtext.*)
 
-.text           0x08000450     0x4a8f
+.text           0x08000450     0x40bf
  *(.text .text.*)
  .text.NVIC_PriorityGroupConfig
                 0x08000450       0x44 ./system/src/stm32f1-stdperiph/misc.o
@@ -4301,587 +4349,566 @@ END GROUP
  .text.SystemCoreClockUpdate
                 0x080017f8       0x9c ./system/src/cmsis/system_stm32f10x.o
                 0x080017f8                SystemCoreClockUpdate
- .text.tftps    0x08001894       0xec ./src/TFTP/tftp.o
+ .text.tftps    0x08001894        0x2 ./src/TFTP/tftp.o
                 0x08001894                tftps
+ *fill*         0x08001896        0x2 
  .text.GPIO_Configuration
-                0x08001980       0xd4 ./src/PlatformHandler/gpioHandler.o
-                0x08001980                GPIO_Configuration
+                0x08001898       0xd4 ./src/PlatformHandler/gpioHandler.o
+                0x08001898                GPIO_Configuration
  .text.NVIC_Configuration
-                0x08001a54       0x30 ./src/PlatformHandler/nvicHandler.o
-                0x08001a54                NVIC_Configuration
+                0x0800196c       0x30 ./src/PlatformHandler/nvicHandler.o
+                0x0800196c                NVIC_Configuration
  .text.RCC_Configuration
-                0x08001a84       0x22 ./src/PlatformHandler/rccHandler.o
-                0x08001a84                RCC_Configuration
- *fill*         0x08001aa6        0x2 
+                0x0800199c       0x22 ./src/PlatformHandler/rccHandler.o
+                0x0800199c                RCC_Configuration
+ *fill*         0x080019be        0x2 
  .text.SPI_Configuration
-                0x08001aa8       0x54 ./src/PlatformHandler/spiHandler.o
-                0x08001aa8                SPI_Configuration
+                0x080019c0       0x54 ./src/PlatformHandler/spiHandler.o
+                0x080019c0                SPI_Configuration
  .text.Timer_Configuration
-                0x08001afc       0x58 ./src/PlatformHandler/timerHandler.o
-                0x08001afc                Timer_Configuration
+                0x08001a14       0x58 ./src/PlatformHandler/timerHandler.o
+                0x08001a14                Timer_Configuration
  .text.Timer2_ISR
-                0x08001b54       0xe4 ./src/PlatformHandler/timerHandler.o
-                0x08001b54                Timer2_ISR
+                0x08001a6c       0xe4 ./src/PlatformHandler/timerHandler.o
+                0x08001a6c                Timer2_ISR
  .text.setDevtime
-                0x08001c38        0xc ./src/PlatformHandler/timerHandler.o
-                0x08001c38                setDevtime
- .text.millis   0x08001c44        0xc ./src/PlatformHandler/timerHandler.o
-                0x08001c44                millis
+                0x08001b50        0xc ./src/PlatformHandler/timerHandler.o
+                0x08001b50                setDevtime
+ .text.millis   0x08001b5c        0xc ./src/PlatformHandler/timerHandler.o
+                0x08001b5c                millis
  .text.USART_Configuration
-                0x08001c50       0x3c ./src/PlatformHandler/uartHandler.o
-                0x08001c50                USART_Configuration
+                0x08001b68       0x3c ./src/PlatformHandler/uartHandler.o
+                0x08001b68                USART_Configuration
  .text.blink_led_init
-                0x08001c8c       0x3c ./src/BlinkLed.o
-                0x08001c8c                blink_led_init
+                0x08001ba4       0x3c ./src/BlinkLed.o
+                0x08001ba4                blink_led_init
  .text.timer_start
-                0x08001cc8       0x3c ./src/Timer.o
-                0x08001cc8                timer_start
+                0x08001be0       0x3c ./src/Timer.o
+                0x08001be0                timer_start
  .text.timer_tick
-                0x08001d04       0x14 ./src/Timer.o
-                0x08001d04                timer_tick
+                0x08001c1c       0x14 ./src/Timer.o
+                0x08001c1c                timer_tick
  .text.SysTick_Handler
-                0x08001d18        0x8 ./src/Timer.o
-                0x08001d18                SysTick_Handler
+                0x08001c30        0x8 ./src/Timer.o
+                0x08001c30                SysTick_Handler
  .text.W6100Initialze
-                0x08001d20       0x78 ./src/W6100RelFunctions.o
-                0x08001d20                W6100Initialze
+                0x08001c38       0x6c ./src/W6100RelFunctions.o
+                0x08001c38                W6100Initialze
  .text.spiReadByte
-                0x08001d98       0x30 ./src/W6100RelFunctions.o
-                0x08001d98                spiReadByte
+                0x08001ca4       0x30 ./src/W6100RelFunctions.o
+                0x08001ca4                spiReadByte
  .text.spiWriteByte
-                0x08001dc8       0x30 ./src/W6100RelFunctions.o
-                0x08001dc8                spiWriteByte
+                0x08001cd4       0x30 ./src/W6100RelFunctions.o
+                0x08001cd4                spiWriteByte
  .text.csEnable
-                0x08001df8       0x10 ./src/W6100RelFunctions.o
-                0x08001df8                csEnable
+                0x08001d04       0x10 ./src/W6100RelFunctions.o
+                0x08001d04                csEnable
  .text.csDisable
-                0x08001e08       0x10 ./src/W6100RelFunctions.o
-                0x08001e08                csDisable
+                0x08001d14       0x10 ./src/W6100RelFunctions.o
+                0x08001d14                csDisable
  .text.resetAssert
-                0x08001e18       0x14 ./src/W6100RelFunctions.o
-                0x08001e18                resetAssert
+                0x08001d24       0x14 ./src/W6100RelFunctions.o
+                0x08001d24                resetAssert
  .text.resetDeassert
-                0x08001e2c       0x14 ./src/W6100RelFunctions.o
-                0x08001e2c                resetDeassert
- .text.delay    0x08001e40       0x14 ./src/main.o
-                0x08001e40                delay
+                0x08001d38       0x14 ./src/W6100RelFunctions.o
+                0x08001d38                resetDeassert
+ .text.delay    0x08001d4c       0x14 ./src/main.o
+                0x08001d4c                delay
  .text.print_network_information
-                0x08001e54      0x2dc ./src/main.o
-                0x08001e54                print_network_information
- .text.main     0x08002130       0xe4 ./src/main.o
-                0x08002130                main
+                0x08001d60      0x2dc ./src/main.o
+                0x08001d60                print_network_information
+ .text.main     0x0800203c       0xcc ./src/main.o
+                0x0800203c                main
  .text.UartPutc
-                0x08002214       0x1a ./src/retarget.o
-                0x08002214                UartPutc
- *fill*         0x0800222e        0x2 
- .text._write   0x08002230       0x24 ./src/retarget.o
-                0x08002230                _write
+                0x08002108       0x1a ./src/retarget.o
+                0x08002108                UartPutc
+ *fill*         0x08002122        0x2 
+ .text._write   0x08002124       0x24 ./src/retarget.o
+                0x08002124                _write
  .text.USB_HP_CAN1_TX_IRQHandler
-                0x08002254        0x2 ./src/stm32f10x_it.o
-                0x08002254                USB_HP_CAN1_TX_IRQHandler
+                0x08002148        0x2 ./src/stm32f10x_it.o
+                0x08002148                USB_HP_CAN1_TX_IRQHandler
  .text.USB_LP_CAN1_RX0_IRQHandler
-                0x08002256        0x2 ./src/stm32f10x_it.o
-                0x08002256                USB_LP_CAN1_RX0_IRQHandler
+                0x0800214a        0x2 ./src/stm32f10x_it.o
+                0x0800214a                USB_LP_CAN1_RX0_IRQHandler
  .text.CAN1_RX1_IRQHandler
-                0x08002258        0x2 ./src/stm32f10x_it.o
-                0x08002258                CAN1_RX1_IRQHandler
+                0x0800214c        0x2 ./src/stm32f10x_it.o
+                0x0800214c                CAN1_RX1_IRQHandler
  .text.CAN1_SCE_IRQHandler
-                0x0800225a        0x2 ./src/stm32f10x_it.o
-                0x0800225a                CAN1_SCE_IRQHandler
+                0x0800214e        0x2 ./src/stm32f10x_it.o
+                0x0800214e                CAN1_SCE_IRQHandler
  .text.EXTI9_5_IRQHandler
-                0x0800225c        0x2 ./src/stm32f10x_it.o
-                0x0800225c                EXTI9_5_IRQHandler
+                0x08002150        0x2 ./src/stm32f10x_it.o
+                0x08002150                EXTI9_5_IRQHandler
  .text.TIM1_BRK_IRQHandler
-                0x0800225e        0x2 ./src/stm32f10x_it.o
-                0x0800225e                TIM1_BRK_IRQHandler
+                0x08002152        0x2 ./src/stm32f10x_it.o
+                0x08002152                TIM1_BRK_IRQHandler
  .text.TIM1_UP_IRQHandler
-                0x08002260        0x2 ./src/stm32f10x_it.o
-                0x08002260                TIM1_UP_IRQHandler
+                0x08002154        0x2 ./src/stm32f10x_it.o
+                0x08002154                TIM1_UP_IRQHandler
  .text.TIM1_TRG_COM_IRQHandler
-                0x08002262        0x2 ./src/stm32f10x_it.o
-                0x08002262                TIM1_TRG_COM_IRQHandler
+                0x08002156        0x2 ./src/stm32f10x_it.o
+                0x08002156                TIM1_TRG_COM_IRQHandler
  .text.TIM1_CC_IRQHandler
-                0x08002264        0x2 ./src/stm32f10x_it.o
-                0x08002264                TIM1_CC_IRQHandler
+                0x08002158        0x2 ./src/stm32f10x_it.o
+                0x08002158                TIM1_CC_IRQHandler
  .text.TIM2_IRQHandler
-                0x08002266       0x22 ./src/stm32f10x_it.o
-                0x08002266                TIM2_IRQHandler
+                0x0800215a       0x22 ./src/stm32f10x_it.o
+                0x0800215a                TIM2_IRQHandler
  .text.TIM3_IRQHandler
-                0x08002288        0x2 ./src/stm32f10x_it.o
-                0x08002288                TIM3_IRQHandler
+                0x0800217c        0x2 ./src/stm32f10x_it.o
+                0x0800217c                TIM3_IRQHandler
  .text.TIM4_IRQHandler
-                0x0800228a        0x2 ./src/stm32f10x_it.o
-                0x0800228a                TIM4_IRQHandler
+                0x0800217e        0x2 ./src/stm32f10x_it.o
+                0x0800217e                TIM4_IRQHandler
  .text.I2C1_EV_IRQHandler
-                0x0800228c        0x2 ./src/stm32f10x_it.o
-                0x0800228c                I2C1_EV_IRQHandler
+                0x08002180        0x2 ./src/stm32f10x_it.o
+                0x08002180                I2C1_EV_IRQHandler
  .text.I2C1_ER_IRQHandler
-                0x0800228e        0x2 ./src/stm32f10x_it.o
-                0x0800228e                I2C1_ER_IRQHandler
+                0x08002182        0x2 ./src/stm32f10x_it.o
+                0x08002182                I2C1_ER_IRQHandler
  .text.I2C2_EV_IRQHandler
-                0x08002290        0x2 ./src/stm32f10x_it.o
-                0x08002290                I2C2_EV_IRQHandler
+                0x08002184        0x2 ./src/stm32f10x_it.o
+                0x08002184                I2C2_EV_IRQHandler
  .text.I2C2_ER_IRQHandler
-                0x08002292        0x2 ./src/stm32f10x_it.o
-                0x08002292                I2C2_ER_IRQHandler
+                0x08002186        0x2 ./src/stm32f10x_it.o
+                0x08002186                I2C2_ER_IRQHandler
  .text.SPI1_IRQHandler
-                0x08002294        0x2 ./src/stm32f10x_it.o
-                0x08002294                SPI1_IRQHandler
+                0x08002188        0x2 ./src/stm32f10x_it.o
+                0x08002188                SPI1_IRQHandler
  .text.SPI2_IRQHandler
-                0x08002296        0x2 ./src/stm32f10x_it.o
-                0x08002296                SPI2_IRQHandler
+                0x0800218a        0x2 ./src/stm32f10x_it.o
+                0x0800218a                SPI2_IRQHandler
  .text.USART1_IRQHandler
-                0x08002298        0x2 ./src/stm32f10x_it.o
-                0x08002298                USART1_IRQHandler
+                0x0800218c        0x2 ./src/stm32f10x_it.o
+                0x0800218c                USART1_IRQHandler
  .text.USART2_IRQHandler
-                0x0800229a        0x2 ./src/stm32f10x_it.o
-                0x0800229a                USART2_IRQHandler
+                0x0800218e        0x2 ./src/stm32f10x_it.o
+                0x0800218e                USART2_IRQHandler
  .text.USART3_IRQHandler
-                0x0800229c        0x2 ./src/stm32f10x_it.o
-                0x0800229c                USART3_IRQHandler
+                0x08002190        0x2 ./src/stm32f10x_it.o
+                0x08002190                USART3_IRQHandler
  .text.EXTI15_10_IRQHandler
-                0x0800229e        0x2 ./src/stm32f10x_it.o
-                0x0800229e                EXTI15_10_IRQHandler
+                0x08002192        0x2 ./src/stm32f10x_it.o
+                0x08002192                EXTI15_10_IRQHandler
  .text.RTCAlarm_IRQHandler
-                0x080022a0        0x2 ./src/stm32f10x_it.o
-                0x080022a0                RTCAlarm_IRQHandler
+                0x08002194        0x2 ./src/stm32f10x_it.o
+                0x08002194                RTCAlarm_IRQHandler
  .text.USBWakeUp_IRQHandler
-                0x080022a2        0x2 ./src/stm32f10x_it.o
-                0x080022a2                USBWakeUp_IRQHandler
+                0x08002196        0x2 ./src/stm32f10x_it.o
+                0x08002196                USBWakeUp_IRQHandler
  .text.TIM8_BRK_IRQHandler
-                0x080022a4        0x2 ./src/stm32f10x_it.o
-                0x080022a4                TIM8_BRK_IRQHandler
+                0x08002198        0x2 ./src/stm32f10x_it.o
+                0x08002198                TIM8_BRK_IRQHandler
  .text.TIM8_UP_IRQHandler
-                0x080022a6        0x2 ./src/stm32f10x_it.o
-                0x080022a6                TIM8_UP_IRQHandler
+                0x0800219a        0x2 ./src/stm32f10x_it.o
+                0x0800219a                TIM8_UP_IRQHandler
  .text.TIM8_TRG_COM_IRQHandler
-                0x080022a8        0x2 ./src/stm32f10x_it.o
-                0x080022a8                TIM8_TRG_COM_IRQHandler
+                0x0800219c        0x2 ./src/stm32f10x_it.o
+                0x0800219c                TIM8_TRG_COM_IRQHandler
  .text.TIM8_CC_IRQHandler
-                0x080022aa        0x2 ./src/stm32f10x_it.o
-                0x080022aa                TIM8_CC_IRQHandler
+                0x0800219e        0x2 ./src/stm32f10x_it.o
+                0x0800219e                TIM8_CC_IRQHandler
  .text.ADC3_IRQHandler
-                0x080022ac        0x2 ./src/stm32f10x_it.o
-                0x080022ac                ADC3_IRQHandler
+                0x080021a0        0x2 ./src/stm32f10x_it.o
+                0x080021a0                ADC3_IRQHandler
  .text.FSMC_IRQHandler
-                0x080022ae        0x2 ./src/stm32f10x_it.o
-                0x080022ae                FSMC_IRQHandler
+                0x080021a2        0x2 ./src/stm32f10x_it.o
+                0x080021a2                FSMC_IRQHandler
  .text.SDIO_IRQHandler
-                0x080022b0        0x2 ./src/stm32f10x_it.o
-                0x080022b0                SDIO_IRQHandler
+                0x080021a4        0x2 ./src/stm32f10x_it.o
+                0x080021a4                SDIO_IRQHandler
  .text.TIM5_IRQHandler
-                0x080022b2        0x2 ./src/stm32f10x_it.o
-                0x080022b2                TIM5_IRQHandler
+                0x080021a6        0x2 ./src/stm32f10x_it.o
+                0x080021a6                TIM5_IRQHandler
  .text.SPI3_IRQHandler
-                0x080022b4        0x2 ./src/stm32f10x_it.o
-                0x080022b4                SPI3_IRQHandler
+                0x080021a8        0x2 ./src/stm32f10x_it.o
+                0x080021a8                SPI3_IRQHandler
  .text.UART4_IRQHandler
-                0x080022b6        0x2 ./src/stm32f10x_it.o
-                0x080022b6                UART4_IRQHandler
+                0x080021aa        0x2 ./src/stm32f10x_it.o
+                0x080021aa                UART4_IRQHandler
  .text.UART5_IRQHandler
-                0x080022b8        0x2 ./src/stm32f10x_it.o
-                0x080022b8                UART5_IRQHandler
+                0x080021ac        0x2 ./src/stm32f10x_it.o
+                0x080021ac                UART5_IRQHandler
  .text.TIM6_IRQHandler
-                0x080022ba        0x2 ./src/stm32f10x_it.o
-                0x080022ba                TIM6_IRQHandler
+                0x080021ae        0x2 ./src/stm32f10x_it.o
+                0x080021ae                TIM6_IRQHandler
  .text.TIM7_IRQHandler
-                0x080022bc        0x2 ./src/stm32f10x_it.o
-                0x080022bc                TIM7_IRQHandler
+                0x080021b0        0x2 ./src/stm32f10x_it.o
+                0x080021b0                TIM7_IRQHandler
  .text.DMA2_Channel1_IRQHandler
-                0x080022be        0x2 ./src/stm32f10x_it.o
-                0x080022be                DMA2_Channel1_IRQHandler
+                0x080021b2        0x2 ./src/stm32f10x_it.o
+                0x080021b2                DMA2_Channel1_IRQHandler
  .text.DMA2_Channel2_IRQHandler
-                0x080022c0        0x2 ./src/stm32f10x_it.o
-                0x080022c0                DMA2_Channel2_IRQHandler
+                0x080021b4        0x2 ./src/stm32f10x_it.o
+                0x080021b4                DMA2_Channel2_IRQHandler
  .text.DMA2_Channel3_IRQHandler
-                0x080022c2        0x2 ./src/stm32f10x_it.o
-                0x080022c2                DMA2_Channel3_IRQHandler
+                0x080021b6        0x2 ./src/stm32f10x_it.o
+                0x080021b6                DMA2_Channel3_IRQHandler
  .text.DMA2_Channel4_5_IRQHandler
-                0x080022c4        0x2 ./src/stm32f10x_it.o
-                0x080022c4                DMA2_Channel4_5_IRQHandler
- *fill*         0x080022c6        0x2 
+                0x080021b8        0x2 ./src/stm32f10x_it.o
+                0x080021b8                DMA2_Channel4_5_IRQHandler
+ *fill*         0x080021ba        0x2 
  .text.WIZCHIP_WRITE
-                0x080022c8       0x4c ./io6Library/Ethernet/W6100/w6100.o
-                0x080022c8                WIZCHIP_WRITE
+                0x080021bc       0x4c ./io6Library/Ethernet/W6100/w6100.o
+                0x080021bc                WIZCHIP_WRITE
  .text.WIZCHIP_READ
-                0x08002314       0x44 ./io6Library/Ethernet/W6100/w6100.o
-                0x08002314                WIZCHIP_READ
+                0x08002208       0x44 ./io6Library/Ethernet/W6100/w6100.o
+                0x08002208                WIZCHIP_READ
  .text.WIZCHIP_WRITE_BUF
-                0x08002358       0x54 ./io6Library/Ethernet/W6100/w6100.o
-                0x08002358                WIZCHIP_WRITE_BUF
+                0x0800224c       0x54 ./io6Library/Ethernet/W6100/w6100.o
+                0x0800224c                WIZCHIP_WRITE_BUF
  .text.WIZCHIP_READ_BUF
-                0x080023ac       0x48 ./io6Library/Ethernet/W6100/w6100.o
-                0x080023ac                WIZCHIP_READ_BUF
- .text.getSn_TX_FSR
-                0x080023f4       0x32 ./io6Library/Ethernet/W6100/w6100.o
-                0x080023f4                getSn_TX_FSR
- .text.getSn_RX_RSR
-                0x08002426       0x32 ./io6Library/Ethernet/W6100/w6100.o
-                0x08002426                getSn_RX_RSR
- .text.wiz_recv_data
-                0x08002458       0x5c ./io6Library/Ethernet/W6100/w6100.o
-                0x08002458                wiz_recv_data
- .text.close    0x080024b4       0x78 ./io6Library/Ethernet/socket.o
-                0x080024b4                close
- .text.socket   0x0800252c      0x224 ./io6Library/Ethernet/socket.o
-                0x0800252c                socket
- .text.recvfrom
-                0x08002750      0x1d0 ./io6Library/Ethernet/socket.o
-                0x08002750                recvfrom
- .text.getsockopt
-                0x08002920      0x244 ./io6Library/Ethernet/socket.o
-                0x08002920                getsockopt
+                0x080022a0       0x48 ./io6Library/Ethernet/W6100/w6100.o
+                0x080022a0                WIZCHIP_READ_BUF
  .text.wizchip_cris_enter
-                0x08002b64        0x2 ./io6Library/Ethernet/wizchip_conf.o
-                0x08002b64                wizchip_cris_enter
+                0x080022e8        0x2 ./io6Library/Ethernet/wizchip_conf.o
+                0x080022e8                wizchip_cris_enter
  .text.wizchip_cris_exit
-                0x08002b66        0x2 ./io6Library/Ethernet/wizchip_conf.o
-                0x08002b66                wizchip_cris_exit
+                0x080022ea        0x2 ./io6Library/Ethernet/wizchip_conf.o
+                0x080022ea                wizchip_cris_exit
  .text.wizchip_cs_select
-                0x08002b68        0x2 ./io6Library/Ethernet/wizchip_conf.o
-                0x08002b68                wizchip_cs_select
+                0x080022ec        0x2 ./io6Library/Ethernet/wizchip_conf.o
+                0x080022ec                wizchip_cs_select
  .text.wizchip_cs_deselect
-                0x08002b6a        0x2 ./io6Library/Ethernet/wizchip_conf.o
-                0x08002b6a                wizchip_cs_deselect
+                0x080022ee        0x2 ./io6Library/Ethernet/wizchip_conf.o
+                0x080022ee                wizchip_cs_deselect
  .text.wizchip_spi_read
-                0x08002b6c        0x4 ./io6Library/Ethernet/wizchip_conf.o
-                0x08002b6c                wizchip_spi_read
+                0x080022f0        0x4 ./io6Library/Ethernet/wizchip_conf.o
+                0x080022f0                wizchip_spi_read
  .text.wizchip_spi_write
-                0x08002b70        0x2 ./io6Library/Ethernet/wizchip_conf.o
-                0x08002b70                wizchip_spi_write
- *fill*         0x08002b72        0x2 
+                0x080022f4        0x2 ./io6Library/Ethernet/wizchip_conf.o
+                0x080022f4                wizchip_spi_write
+ *fill*         0x080022f6        0x2 
  .text.wizchip_spi_read_buf
-                0x08002b74       0x24 ./io6Library/Ethernet/wizchip_conf.o
-                0x08002b74                wizchip_spi_read_buf
+                0x080022f8       0x24 ./io6Library/Ethernet/wizchip_conf.o
+                0x080022f8                wizchip_spi_read_buf
  .text.wizchip_spi_write_buf
-                0x08002b98       0x24 ./io6Library/Ethernet/wizchip_conf.o
-                0x08002b98                wizchip_spi_write_buf
+                0x0800231c       0x24 ./io6Library/Ethernet/wizchip_conf.o
+                0x0800231c                wizchip_spi_write_buf
  .text.reg_wizchip_cs_cbfunc
-                0x08002bbc       0x2c ./io6Library/Ethernet/wizchip_conf.o
-                0x08002bbc                reg_wizchip_cs_cbfunc
+                0x08002340       0x2c ./io6Library/Ethernet/wizchip_conf.o
+                0x08002340                reg_wizchip_cs_cbfunc
  .text.reg_wizchip_spi_cbfunc
-                0x08002be8       0x5c ./io6Library/Ethernet/wizchip_conf.o
-                0x08002be8                reg_wizchip_spi_cbfunc
+                0x0800236c       0x5c ./io6Library/Ethernet/wizchip_conf.o
+                0x0800236c                reg_wizchip_spi_cbfunc
  .text.wizchip_sw_reset
-                0x08002c44      0x138 ./io6Library/Ethernet/wizchip_conf.o
-                0x08002c44                wizchip_sw_reset
+                0x080023c8      0x138 ./io6Library/Ethernet/wizchip_conf.o
+                0x080023c8                wizchip_sw_reset
  .text.wizchip_init
-                0x08002d7c       0x8a ./io6Library/Ethernet/wizchip_conf.o
-                0x08002d7c                wizchip_init
- *fill*         0x08002e06        0x2 
+                0x08002500       0x8a ./io6Library/Ethernet/wizchip_conf.o
+                0x08002500                wizchip_init
+ *fill*         0x0800258a        0x2 
  .text.wizchip_clrinterrupt
-                0x08002e08       0x48 ./io6Library/Ethernet/wizchip_conf.o
-                0x08002e08                wizchip_clrinterrupt
+                0x0800258c       0x48 ./io6Library/Ethernet/wizchip_conf.o
+                0x0800258c                wizchip_clrinterrupt
  .text.wizchip_getinterrupt
-                0x08002e50       0x28 ./io6Library/Ethernet/wizchip_conf.o
-                0x08002e50                wizchip_getinterrupt
+                0x080025d4       0x28 ./io6Library/Ethernet/wizchip_conf.o
+                0x080025d4                wizchip_getinterrupt
  .text.wizchip_setinterruptmask
-                0x08002e78       0x30 ./io6Library/Ethernet/wizchip_conf.o
-                0x08002e78                wizchip_setinterruptmask
+                0x080025fc       0x30 ./io6Library/Ethernet/wizchip_conf.o
+                0x080025fc                wizchip_setinterruptmask
  .text.wizchip_getinterruptmask
-                0x08002ea8       0x2c ./io6Library/Ethernet/wizchip_conf.o
-                0x08002ea8                wizchip_getinterruptmask
+                0x0800262c       0x2c ./io6Library/Ethernet/wizchip_conf.o
+                0x0800262c                wizchip_getinterruptmask
  .text.wizphy_getphylink
-                0x08002ed4       0x10 ./io6Library/Ethernet/wizchip_conf.o
-                0x08002ed4                wizphy_getphylink
+                0x08002658       0x10 ./io6Library/Ethernet/wizchip_conf.o
+                0x08002658                wizphy_getphylink
  .text.wizphy_reset
-                0x08002ee4       0x34 ./io6Library/Ethernet/wizchip_conf.o
-                0x08002ee4                wizphy_reset
+                0x08002668       0x34 ./io6Library/Ethernet/wizchip_conf.o
+                0x08002668                wizphy_reset
  .text.wizphy_setphyconf
-                0x08002f18       0x60 ./io6Library/Ethernet/wizchip_conf.o
-                0x08002f18                wizphy_setphyconf
+                0x0800269c       0x60 ./io6Library/Ethernet/wizchip_conf.o
+                0x0800269c                wizphy_setphyconf
  .text.wizphy_getphyconf
-                0x08002f78       0x4c ./io6Library/Ethernet/wizchip_conf.o
-                0x08002f78                wizphy_getphyconf
+                0x080026fc       0x4c ./io6Library/Ethernet/wizchip_conf.o
+                0x080026fc                wizphy_getphyconf
  .text.wizphy_getphystatus
-                0x08002fc4       0x4c ./io6Library/Ethernet/wizchip_conf.o
-                0x08002fc4                wizphy_getphystatus
+                0x08002748       0x4c ./io6Library/Ethernet/wizchip_conf.o
+                0x08002748                wizphy_getphystatus
  .text.wizphy_setphypmode
-                0x08003010       0x28 ./io6Library/Ethernet/wizchip_conf.o
-                0x08003010                wizphy_setphypmode
+                0x08002794       0x28 ./io6Library/Ethernet/wizchip_conf.o
+                0x08002794                wizphy_setphypmode
  .text.wizphy_getphypmode
-                0x08003038       0x1c ./io6Library/Ethernet/wizchip_conf.o
-                0x08003038                wizphy_getphypmode
+                0x080027bc       0x1c ./io6Library/Ethernet/wizchip_conf.o
+                0x080027bc                wizphy_getphypmode
  .text.ctlwizchip
-                0x08003054      0x254 ./io6Library/Ethernet/wizchip_conf.o
-                0x08003054                ctlwizchip
+                0x080027d8      0x254 ./io6Library/Ethernet/wizchip_conf.o
+                0x080027d8                ctlwizchip
  .text.wizchip_setnetinfo
-                0x080032a8       0xc4 ./io6Library/Ethernet/wizchip_conf.o
-                0x080032a8                wizchip_setnetinfo
+                0x08002a2c       0xc4 ./io6Library/Ethernet/wizchip_conf.o
+                0x08002a2c                wizchip_setnetinfo
  .text.wizchip_getnetinfo
-                0x0800336c       0xc4 ./io6Library/Ethernet/wizchip_conf.o
-                0x0800336c                wizchip_getnetinfo
+                0x08002af0       0xc4 ./io6Library/Ethernet/wizchip_conf.o
+                0x08002af0                wizchip_getnetinfo
  .text.wizchip_setnetmode
-                0x08003430       0x38 ./io6Library/Ethernet/wizchip_conf.o
-                0x08003430                wizchip_setnetmode
+                0x08002bb4       0x38 ./io6Library/Ethernet/wizchip_conf.o
+                0x08002bb4                wizchip_setnetmode
  .text.wizchip_getnetmode
-                0x08003468       0x30 ./io6Library/Ethernet/wizchip_conf.o
-                0x08003468                wizchip_getnetmode
+                0x08002bec       0x30 ./io6Library/Ethernet/wizchip_conf.o
+                0x08002bec                wizchip_getnetmode
  .text.wizchip_settimeout
-                0x08003498       0x50 ./io6Library/Ethernet/wizchip_conf.o
-                0x08003498                wizchip_settimeout
+                0x08002c1c       0x50 ./io6Library/Ethernet/wizchip_conf.o
+                0x08002c1c                wizchip_settimeout
  .text.wizchip_gettimeout
-                0x080034e8       0x5c ./io6Library/Ethernet/wizchip_conf.o
-                0x080034e8                wizchip_gettimeout
+                0x08002c6c       0x5c ./io6Library/Ethernet/wizchip_conf.o
+                0x08002c6c                wizchip_gettimeout
  .text.ctlnetwork
-                0x08003544       0x74 ./io6Library/Ethernet/wizchip_conf.o
-                0x08003544                ctlnetwork
- .text.__errno  0x080035b8        0xc c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-errno.o)
-                0x080035b8                __errno
- .text.memcpy   0x080035c4       0x1c c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-memcpy-stub.o)
-                0x080035c4                memcpy
- .text.memset   0x080035e0       0x10 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-memset.o)
-                0x080035e0                memset
- .text.printf   0x080035f0       0x30 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-printf.o)
-                0x080035f0                iprintf
-                0x080035f0                printf
- .text          0x08003620       0x10 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-strlen.o)
-                0x08003620                strlen
+                0x08002cc8       0x74 ./io6Library/Ethernet/wizchip_conf.o
+                0x08002cc8                ctlnetwork
+ .text.__errno  0x08002d3c        0xc c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-errno.o)
+                0x08002d3c                __errno
+ .text.memcpy   0x08002d48       0x1c c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-memcpy-stub.o)
+                0x08002d48                memcpy
+ .text.memset   0x08002d64       0x10 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-memset.o)
+                0x08002d64                memset
+ .text.printf   0x08002d74       0x30 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-printf.o)
+                0x08002d74                iprintf
+                0x08002d74                printf
+ .text          0x08002da4       0x10 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-strlen.o)
+                0x08002da4                strlen
  .text._vsnprintf_r
-                0x08003630       0x58 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-vsnprintf.o)
-                0x08003630                _vsniprintf_r
-                0x08003630                _vsnprintf_r
+                0x08002db4       0x58 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-vsnprintf.o)
+                0x08002db4                _vsniprintf_r
+                0x08002db4                _vsnprintf_r
  .text.vsnprintf
-                0x08003688       0x1c c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-vsnprintf.o)
-                0x08003688                vsniprintf
-                0x08003688                vsnprintf
- .text.std      0x080036a4       0x48 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-findfp.o)
+                0x08002e0c       0x1c c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-vsnprintf.o)
+                0x08002e0c                vsniprintf
+                0x08002e0c                vsnprintf
+ .text.std      0x08002e28       0x48 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-findfp.o)
  .text._cleanup_r
-                0x080036ec        0xc c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-findfp.o)
-                0x080036ec                _cleanup_r
+                0x08002e70        0xc c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-findfp.o)
+                0x08002e70                _cleanup_r
  .text.__sfmoreglue
-                0x080036f8       0x2c c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-findfp.o)
-                0x080036f8                __sfmoreglue
+                0x08002e7c       0x2c c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-findfp.o)
+                0x08002e7c                __sfmoreglue
  .text.__sfp_lock_acquire
-                0x08003724        0xc c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-findfp.o)
-                0x08003724                __sfp_lock_acquire
+                0x08002ea8        0xc c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-findfp.o)
+                0x08002ea8                __sfp_lock_acquire
  .text.__sfp_lock_release
-                0x08003730        0xc c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-findfp.o)
-                0x08003730                __sfp_lock_release
+                0x08002eb4        0xc c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-findfp.o)
+                0x08002eb4                __sfp_lock_release
  .text.__sinit_lock_acquire
-                0x0800373c        0xc c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-findfp.o)
-                0x0800373c                __sinit_lock_acquire
+                0x08002ec0        0xc c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-findfp.o)
+                0x08002ec0                __sinit_lock_acquire
  .text.__sinit_lock_release
-                0x08003748        0xc c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-findfp.o)
-                0x08003748                __sinit_lock_release
- .text.__sinit  0x08003754       0x70 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-findfp.o)
-                0x08003754                __sinit
- .text.__sfp    0x080037c4       0x8c c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-findfp.o)
-                0x080037c4                __sfp
+                0x08002ecc        0xc c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-findfp.o)
+                0x08002ecc                __sinit_lock_release
+ .text.__sinit  0x08002ed8       0x70 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-findfp.o)
+                0x08002ed8                __sinit
+ .text.__sfp    0x08002f48       0x8c c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-findfp.o)
+                0x08002f48                __sfp
  .text._fwalk_reent
-                0x08003850       0x3c c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-fwalk.o)
-                0x08003850                _fwalk_reent
+                0x08002fd4       0x3c c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-fwalk.o)
+                0x08002fd4                _fwalk_reent
  .text.__retarget_lock_init_recursive
-                0x0800388c        0x2 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-lock.o)
-                0x0800388c                __retarget_lock_init_recursive
+                0x08003010        0x2 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-lock.o)
+                0x08003010                __retarget_lock_init_recursive
  .text.__retarget_lock_acquire_recursive
-                0x0800388e        0x2 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-lock.o)
-                0x0800388e                __retarget_lock_acquire_recursive
+                0x08003012        0x2 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-lock.o)
+                0x08003012                __retarget_lock_acquire_recursive
  .text.__retarget_lock_release_recursive
-                0x08003890        0x2 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-lock.o)
-                0x08003890                __retarget_lock_release_recursive
- *fill*         0x08003892        0x2 
- .text._free_r  0x08003894       0x98 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-freer.o)
-                0x08003894                _free_r
+                0x08003014        0x2 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-lock.o)
+                0x08003014                __retarget_lock_release_recursive
+ *fill*         0x08003016        0x2 
+ .text._free_r  0x08003018       0x98 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-freer.o)
+                0x08003018                _free_r
  .text._malloc_r
-                0x0800392c       0xb4 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-mallocr.o)
-                0x0800392c                _malloc_r
+                0x080030b0       0xb4 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-mallocr.o)
+                0x080030b0                _malloc_r
  .text.__ssputs_r
-                0x080039e0       0xb6 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-svfprintf.o)
-                0x080039e0                __ssputs_r
- *fill*         0x08003a96        0x2 
+                0x08003164       0xb6 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-svfprintf.o)
+                0x08003164                __ssputs_r
+ *fill*         0x0800321a        0x2 
  .text._svfprintf_r
-                0x08003a98      0x1f0 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-svfprintf.o)
-                0x08003a98                _svfiprintf_r
-                0x08003a98                _svfprintf_r
+                0x0800321c      0x1f0 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-svfprintf.o)
+                0x0800321c                _svfiprintf_r
+                0x0800321c                _svfprintf_r
  .text.__sfputc_r
-                0x08003c88       0x2a c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-vfprintf.o)
+                0x0800340c       0x2a c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-vfprintf.o)
  .text.__sfputs_r
-                0x08003cb2       0x24 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-vfprintf.o)
-                0x08003cb2                __sfputs_r
- *fill*         0x08003cd6        0x2 
+                0x08003436       0x24 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-vfprintf.o)
+                0x08003436                __sfputs_r
+ *fill*         0x0800345a        0x2 
  .text._vfprintf_r
-                0x08003cd8      0x250 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-vfprintf.o)
-                0x08003cd8                _vfprintf_r
-                0x08003cd8                _vfiprintf_r
+                0x0800345c      0x250 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-vfprintf.o)
+                0x0800345c                _vfprintf_r
+                0x0800345c                _vfiprintf_r
  .text._printf_common
-                0x08003f28       0xec c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-vfprintf_i.o)
-                0x08003f28                _printf_common
+                0x080036ac       0xec c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x080036ac                _printf_common
  .text._printf_i
-                0x08004014      0x22c c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-vfprintf_i.o)
-                0x08004014                _printf_i
- .text._sbrk_r  0x08004240       0x20 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-sbrkr.o)
-                0x08004240                _sbrk_r
- .text.__sread  0x08004260       0x22 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-stdio.o)
-                0x08004260                __sread
+                0x08003798      0x22c c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x08003798                _printf_i
+ .text._sbrk_r  0x080039c4       0x20 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-sbrkr.o)
+                0x080039c4                _sbrk_r
+ .text.__sread  0x080039e4       0x22 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-stdio.o)
+                0x080039e4                __sread
  .text.__swrite
-                0x08004282       0x38 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-stdio.o)
-                0x08004282                __swrite
- .text.__sseek  0x080042ba       0x24 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-stdio.o)
-                0x080042ba                __sseek
+                0x08003a06       0x38 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-stdio.o)
+                0x08003a06                __swrite
+ .text.__sseek  0x08003a3e       0x24 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-stdio.o)
+                0x08003a3e                __sseek
  .text.__sclose
-                0x080042de        0x8 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-stdio.o)
-                0x080042de                __sclose
- *fill*         0x080042e6        0x2 
+                0x08003a62        0x8 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-stdio.o)
+                0x08003a62                __sclose
+ *fill*         0x08003a6a        0x2 
  .text.__swbuf_r
-                0x080042e8       0xa4 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-wbuf.o)
-                0x080042e8                __swbuf_r
+                0x08003a6c       0xa4 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-wbuf.o)
+                0x08003a6c                __swbuf_r
  .text._write_r
-                0x0800438c       0x24 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-writer.o)
-                0x0800438c                _write_r
+                0x08003b10       0x24 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-writer.o)
+                0x08003b10                _write_r
  .text.__swsetup_r
-                0x080043b0       0xdc c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-wsetup.o)
-                0x080043b0                __swsetup_r
+                0x08003b34       0xdc c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-wsetup.o)
+                0x08003b34                __swsetup_r
  .text._close_r
-                0x0800448c       0x20 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-closer.o)
-                0x0800448c                _close_r
+                0x08003c10       0x20 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-closer.o)
+                0x08003c10                _close_r
  .text.__sflush_r
-                0x080044ac      0x10c c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-fflush.o)
-                0x080044ac                __sflush_r
+                0x08003c30      0x10c c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-fflush.o)
+                0x08003c30                __sflush_r
  .text._fflush_r
-                0x080045b8       0x78 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-fflush.o)
-                0x080045b8                _fflush_r
+                0x08003d3c       0x78 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-fflush.o)
+                0x08003d3c                _fflush_r
  .text._lseek_r
-                0x08004630       0x24 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-lseekr.o)
-                0x08004630                _lseek_r
+                0x08003db4       0x24 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-lseekr.o)
+                0x08003db4                _lseek_r
  .text.__swhatbuf_r
-                0x08004654       0x48 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-makebuf.o)
-                0x08004654                __swhatbuf_r
+                0x08003dd8       0x48 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-makebuf.o)
+                0x08003dd8                __swhatbuf_r
  .text.__smakebuf_r
-                0x0800469c       0x80 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-makebuf.o)
-                0x0800469c                __smakebuf_r
- .text.memchr   0x0800471c       0x1c c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-memchr-stub.o)
-                0x0800471c                memchr
- .text.memmove  0x08004738       0x34 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-memmove.o)
-                0x08004738                memmove
+                0x08003e20       0x80 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-makebuf.o)
+                0x08003e20                __smakebuf_r
+ .text.memchr   0x08003ea0       0x1c c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-memchr-stub.o)
+                0x08003ea0                memchr
+ .text.memmove  0x08003ebc       0x34 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-memmove.o)
+                0x08003ebc                memmove
  .text.__malloc_lock
-                0x0800476c        0xc c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-mlock.o)
-                0x0800476c                __malloc_lock
+                0x08003ef0        0xc c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-mlock.o)
+                0x08003ef0                __malloc_lock
  .text.__malloc_unlock
-                0x08004778        0xc c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-mlock.o)
-                0x08004778                __malloc_unlock
+                0x08003efc        0xc c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-mlock.o)
+                0x08003efc                __malloc_unlock
  .text._realloc_r
-                0x08004784       0x4c c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-reallocr.o)
-                0x08004784                _realloc_r
- .text._read_r  0x080047d0       0x24 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-readr.o)
-                0x080047d0                _read_r
+                0x08003f08       0x4c c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-reallocr.o)
+                0x08003f08                _realloc_r
+ .text._read_r  0x08003f54       0x24 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-readr.o)
+                0x08003f54                _read_r
  .text._fstat_r
-                0x080047f4       0x24 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-fstatr.o)
-                0x080047f4                _fstat_r
+                0x08003f78       0x24 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-fstatr.o)
+                0x08003f78                _fstat_r
  .text._isatty_r
-                0x08004818       0x20 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-isattyr.o)
-                0x08004818                _isatty_r
+                0x08003f9c       0x20 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-isattyr.o)
+                0x08003f9c                _isatty_r
  .text._malloc_usable_size_r
-                0x08004838       0x10 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-msizer.o)
-                0x08004838                _malloc_usable_size_r
- .text._close   0x08004848       0x10 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(close.o)
-                0x08004848                _close
- .text._fstat   0x08004858       0x10 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(fstat.o)
-                0x08004858                _fstat
- .text._isatty  0x08004868       0x10 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(isatty.o)
-                0x08004868                _isatty
- .text._lseek   0x08004878       0x10 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(lseek.o)
-                0x08004878                _lseek
- .text._read    0x08004888       0x10 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(read.o)
-                0x08004888                _read
+                0x08003fbc       0x10 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-msizer.o)
+                0x08003fbc                _malloc_usable_size_r
+ .text._close   0x08003fcc       0x10 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(close.o)
+                0x08003fcc                _close
+ .text._fstat   0x08003fdc       0x10 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(fstat.o)
+                0x08003fdc                _fstat
+ .text._isatty  0x08003fec       0x10 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(isatty.o)
+                0x08003fec                _isatty
+ .text._lseek   0x08003ffc       0x10 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(lseek.o)
+                0x08003ffc                _lseek
+ .text._read    0x0800400c       0x10 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(read.o)
+                0x0800400c                _read
  *(.rodata .rodata.* .constdata .constdata.*)
  .rodata.NVIC_PriorityGroupConfig.str1.4
-                0x08004898       0x27 ./system/src/stm32f1-stdperiph/misc.o
- *fill*         0x080048bf        0x1 
+                0x0800401c       0x27 ./system/src/stm32f1-stdperiph/misc.o
+ *fill*         0x08004043        0x1 
  .rodata.GPIO_DeInit.str1.4
-                0x080048c0       0x31 ./system/src/stm32f1-stdperiph/stm32f10x_gpio.o
- *fill*         0x080048f1        0x3 
+                0x08004044       0x31 ./system/src/stm32f1-stdperiph/stm32f10x_gpio.o
+ *fill*         0x08004075        0x3 
  .rodata.RCC_HSEConfig.str1.4
-                0x080048f4       0x30 ./system/src/stm32f1-stdperiph/stm32f10x_rcc.o
+                0x08004078       0x30 ./system/src/stm32f1-stdperiph/stm32f10x_rcc.o
  .rodata.SPI_I2S_DeInit.str1.4
-                0x08004924       0x30 ./system/src/stm32f1-stdperiph/stm32f10x_spi.o
+                0x080040a8       0x30 ./system/src/stm32f1-stdperiph/stm32f10x_spi.o
  .rodata.TIM_DeInit.str1.4
-                0x08004954       0x30 ./system/src/stm32f1-stdperiph/stm32f10x_tim.o
+                0x080040d8       0x30 ./system/src/stm32f1-stdperiph/stm32f10x_tim.o
  .rodata.USART_DeInit.str1.4
-                0x08004984       0x32 ./system/src/stm32f1-stdperiph/stm32f10x_usart.o
- *fill*         0x080049b6        0x2 
+                0x08004108       0x32 ./system/src/stm32f1-stdperiph/stm32f10x_usart.o
+ *fill*         0x0800413a        0x2 
  .rodata.abort.str1.4
-                0x080049b8       0x14 ./system/src/newlib/_exit.o
+                0x0800413c       0x14 ./system/src/newlib/_exit.o
  .rodata.assert_failed.str1.4
-                0x080049cc       0x2b ./system/src/newlib/assert.o
+                0x08004150       0x2b ./system/src/newlib/assert.o
  .rodata.trace_puts.str1.4
-                0x080049f7       0x2b ./system/src/diag/Trace.o
+                0x0800417b       0x2b ./system/src/diag/Trace.o
                                   0x2 (size before relaxing)
- *fill*         0x080049f7        0x1 
+ *fill*         0x0800417b        0x1 
  .rodata.dumpExceptionStack.str1.4
-                0x080049f8      0x11a ./system/src/cortexm/exception_handlers.o
- *fill*         0x08004b12        0x2 
+                0x0800417c      0x11a ./system/src/cortexm/exception_handlers.o
+ *fill*         0x08004296        0x2 
  .rodata.str1.4
-                0x08004b14       0x2a ./system/src/cortexm/exception_handlers.o
- *fill*         0x08004b3e        0x2 
- .rodata.tftpc.str1.4
-                0x08004b40      0x137 ./src/TFTP/tftp.o
- *fill*         0x08004c77        0x1 
- .rodata        0x08004c78       0x10 ./src/W6100RelFunctions.o
+                0x08004298       0x2a ./system/src/cortexm/exception_handlers.o
+ *fill*         0x080042c2        0x2 
+ .rodata        0x080042c4       0x10 ./src/W6100RelFunctions.o
  .rodata.W6100Initialze.str1.4
-                0x08004c88       0x56 ./src/W6100RelFunctions.o
- *fill*         0x08004cde        0x2 
+                0x080042d4       0x3a ./src/W6100RelFunctions.o
+ *fill*         0x0800430e        0x2 
  .rodata.main.str1.4
-                0x08004ce0       0x51 ./src/main.o
- *fill*         0x08004d31        0x3 
+                0x08004310       0x51 ./src/main.o
+ *fill*         0x08004361        0x3 
  .rodata.print_network_information.str1.4
-                0x08004d34      0x114 ./src/main.o
+                0x08004364      0x114 ./src/main.o
  .rodata._global_impure_ptr
-                0x08004e48        0x4 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-impure.o)
-                0x08004e48                _global_impure_ptr
+                0x08004478        0x4 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-impure.o)
+                0x08004478                _global_impure_ptr
  .rodata.__sf_fake_stderr
-                0x08004e4c       0x20 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-findfp.o)
-                0x08004e4c                __sf_fake_stderr
+                0x0800447c       0x20 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-findfp.o)
+                0x0800447c                __sf_fake_stderr
  .rodata.__sf_fake_stdin
-                0x08004e6c       0x20 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-findfp.o)
-                0x08004e6c                __sf_fake_stdin
+                0x0800449c       0x20 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-findfp.o)
+                0x0800449c                __sf_fake_stdin
  .rodata.__sf_fake_stdout
-                0x08004e8c       0x20 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-findfp.o)
-                0x08004e8c                __sf_fake_stdout
+                0x080044bc       0x20 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-findfp.o)
+                0x080044bc                __sf_fake_stdout
  .rodata._svfprintf_r.str1.1
-                0x08004eac       0x11 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-svfprintf.o)
+                0x080044dc       0x11 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-svfprintf.o)
  .rodata._vfprintf_r.str1.1
-                0x08004ebd       0x11 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-vfprintf.o)
+                0x080044ed       0x11 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-vfprintf.o)
  .rodata._printf_i.str1.1
-                0x08004ebd       0x22 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x080044ed       0x22 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-vfprintf_i.o)
  *(vtable)
  *(.eh_frame*)
  *(.glue_7)
- .glue_7        0x08004edf        0x0 linker stubs
+ .glue_7        0x0800450f        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x08004edf        0x0 linker stubs
+ .glue_7t       0x0800450f        0x0 linker stubs
 
-.vfp11_veneer   0x08004ee0        0x0
- .vfp11_veneer  0x08004ee0        0x0 linker stubs
+.vfp11_veneer   0x08004510        0x0
+ .vfp11_veneer  0x08004510        0x0 linker stubs
 
-.v4_bx          0x08004ee0        0x0
- .v4_bx         0x08004ee0        0x0 linker stubs
+.v4_bx          0x08004510        0x0
+ .v4_bx         0x08004510        0x0 linker stubs
 
-.iplt           0x08004ee0        0x0
- .iplt          0x08004ee0        0x0 ./system/src/stm32f1-stdperiph/misc.o
+.iplt           0x08004510        0x0
+ .iplt          0x08004510        0x0 ./system/src/stm32f1-stdperiph/misc.o
 
-.rel.dyn        0x08004ee0        0x0
- .rel.iplt      0x08004ee0        0x0 ./system/src/stm32f1-stdperiph/misc.o
+.rel.dyn        0x08004510        0x0
+ .rel.iplt      0x08004510        0x0 ./system/src/stm32f1-stdperiph/misc.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x08004ee0                . = ALIGN (0x4)
-                0x08004ee0                __exidx_start = .
+                0x08004510                . = ALIGN (0x4)
+                0x08004510                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x08004ee0                __exidx_end = .
-                0x08004ee0                . = ALIGN (0x4)
-                0x08004ee0                _etext = .
-                0x08004ee0                __etext = .
+                0x08004510                __exidx_end = .
+                0x08004510                . = ALIGN (0x4)
+                0x08004510                _etext = .
+                0x08004510                __etext = .
 
-.data_CCMRAM    0x00000000        0x0 load address 0x08004ee0
+.data_CCMRAM    0x00000000        0x0 load address 0x08004510
  FILL mask 0xff
  *(.data.CCMRAM .data.CCMRAM.*)
                 0x00000000                . = ALIGN (0x4)
-                0x08004ee0                _sidata = LOADADDR (.data)
+                0x08004510                _sidata = LOADADDR (.data)
 
-.data           0x20000000      0x130 load address 0x08004ee0
+.data           0x20000000      0x12c load address 0x08004510
  FILL mask 0xff
                 0x20000000                _sdata = .
                 0x20000000                __data_start__ = .
@@ -4904,124 +4931,106 @@ END GROUP
                 0x20000034       0x67 ./src/main.o
                 0x20000034                gWIZNETINFO
  *fill*         0x2000009b        0x1 ff
- .data.sock_any_port
-                0x2000009c        0x2 ./io6Library/Ethernet/socket.o
- *fill*         0x2000009e        0x2 ff
- .data.WIZCHIP  0x200000a0       0x28 ./io6Library/Ethernet/wizchip_conf.o
-                0x200000a0                WIZCHIP
+ .data.WIZCHIP  0x2000009c       0x28 ./io6Library/Ethernet/wizchip_conf.o
+                0x2000009c                WIZCHIP
  .data._impure_ptr
-                0x200000c8        0x4 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-impure.o)
-                0x200000c8                _impure_ptr
+                0x200000c4        0x4 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-impure.o)
+                0x200000c4                _impure_ptr
  .data.impure_data
-                0x200000cc       0x60 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-impure.o)
+                0x200000c8       0x60 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-impure.o)
  *(.data_end .data_end.*)
- .data_end      0x2000012c        0x4 ./system/src/newlib/_startup.o
-                0x20000130                . = ALIGN (0x4)
-                0x20000130                _edata = .
-                0x20000130                __data_end__ = .
+ .data_end      0x20000128        0x4 ./system/src/newlib/_startup.o
+                0x2000012c                . = ALIGN (0x4)
+                0x2000012c                _edata = .
+                0x2000012c                __data_end__ = .
 
-.igot.plt       0x20000130        0x0 load address 0x08005010
- .igot.plt      0x20000130        0x0 ./system/src/stm32f1-stdperiph/misc.o
+.igot.plt       0x2000012c        0x0 load address 0x0800463c
+ .igot.plt      0x2000012c        0x0 ./system/src/stm32f1-stdperiph/misc.o
 
 .bss_CCMRAM     0x00000000        0x0
  *(.bss.CCMRAM .bss.CCMRAM.*)
 
-.bss            0x20000130      0x10c
-                0x20000130                __bss_start__ = .
-                0x20000130                _sbss = .
+.bss            0x2000012c       0xd8
+                0x2000012c                __bss_start__ = .
+                0x2000012c                _sbss = .
  *(.bss_begin .bss_begin.*)
- .bss_begin     0x20000130        0x4 ./system/src/newlib/_startup.o
+ .bss_begin     0x2000012c        0x4 ./system/src/newlib/_startup.o
  *(.bss .bss.*)
  .bss.current_heap_end.4004
-                0x20000134        0x4 ./system/src/newlib/_sbrk.o
+                0x20000130        0x4 ./system/src/newlib/_sbrk.o
  .bss.name.4373
-                0x20000138        0x1 ./system/src/newlib/_syscalls.o
- *fill*         0x20000139        0x3 
- .bss.buf.5248  0x2000013c       0x80 ./system/src/diag/Trace.o
- .bss.destip.5439
-                0x200001bc       0x10 ./src/TFTP/tftp.o
- .bss.destport.5440
-                0x200001cc        0x2 ./src/TFTP/tftp.o
- *fill*         0x200001ce        0x2 
- .bss.g_tftp_state
-                0x200001d0        0x4 ./src/TFTP/tftp.o
- .bss.day_cnt   0x200001d4        0x2 ./src/PlatformHandler/timerHandler.o
-                0x200001d4                day_cnt
- *fill*         0x200001d6        0x2 
+                0x20000134        0x1 ./system/src/newlib/_syscalls.o
+ *fill*         0x20000135        0x3 
+ .bss.buf.5248  0x20000138       0x80 ./system/src/diag/Trace.o
+ .bss.day_cnt   0x200001b8        0x2 ./src/PlatformHandler/timerHandler.o
+                0x200001b8                day_cnt
+ *fill*         0x200001ba        0x2 
  .bss.devtime_msec
-                0x200001d8        0x4 ./src/PlatformHandler/timerHandler.o
-                0x200001d8                devtime_msec
+                0x200001bc        0x4 ./src/PlatformHandler/timerHandler.o
+                0x200001bc                devtime_msec
  .bss.devtime_sec
-                0x200001dc        0x4 ./src/PlatformHandler/timerHandler.o
-                0x200001dc                devtime_sec
- .bss.hour_cnt  0x200001e0        0x1 ./src/PlatformHandler/timerHandler.o
-                0x200001e0                hour_cnt
- .bss.min_cnt   0x200001e1        0x1 ./src/PlatformHandler/timerHandler.o
-                0x200001e1                min_cnt
- .bss.msec_cnt  0x200001e2        0x2 ./src/PlatformHandler/timerHandler.o
-                0x200001e2                msec_cnt
+                0x200001c0        0x4 ./src/PlatformHandler/timerHandler.o
+                0x200001c0                devtime_sec
+ .bss.hour_cnt  0x200001c4        0x1 ./src/PlatformHandler/timerHandler.o
+                0x200001c4                hour_cnt
+ .bss.min_cnt   0x200001c5        0x1 ./src/PlatformHandler/timerHandler.o
+                0x200001c5                min_cnt
+ .bss.msec_cnt  0x200001c6        0x2 ./src/PlatformHandler/timerHandler.o
+                0x200001c6                msec_cnt
  .bss.runled_msec
-                0x200001e4        0x2 ./src/PlatformHandler/timerHandler.o
-                0x200001e4                runled_msec
- .bss.sec_cnt   0x200001e6        0x1 ./src/PlatformHandler/timerHandler.o
-                0x200001e6                sec_cnt
- *fill*         0x200001e7        0x1 
- .bss.sock_io_mode
-                0x200001e8        0x2 ./io6Library/Ethernet/socket.o
- .bss.sock_is_sending
-                0x200001ea        0x2 ./io6Library/Ethernet/socket.o
- .bss.sock_pack_info
-                0x200001ec        0x8 ./io6Library/Ethernet/socket.o
- .bss.sock_remained_size
-                0x200001f4       0x10 ./io6Library/Ethernet/socket.o
- .bss._DNS6_    0x20000204       0x10 ./io6Library/Ethernet/wizchip_conf.o
- .bss._DNS_     0x20000214        0x4 ./io6Library/Ethernet/wizchip_conf.o
- .bss._IPMODE_  0x20000218        0x1 ./io6Library/Ethernet/wizchip_conf.o
- *fill*         0x20000219        0x3 
+                0x200001c8        0x2 ./src/PlatformHandler/timerHandler.o
+                0x200001c8                runled_msec
+ .bss.sec_cnt   0x200001ca        0x1 ./src/PlatformHandler/timerHandler.o
+                0x200001ca                sec_cnt
+ *fill*         0x200001cb        0x1 
+ .bss._DNS6_    0x200001cc       0x10 ./io6Library/Ethernet/wizchip_conf.o
+ .bss._DNS_     0x200001dc        0x4 ./io6Library/Ethernet/wizchip_conf.o
+ .bss._IPMODE_  0x200001e0        0x1 ./io6Library/Ethernet/wizchip_conf.o
+ *fill*         0x200001e1        0x3 
  .bss.__malloc_free_list
-                0x2000021c        0x4 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-mallocr.o)
-                0x2000021c                __malloc_free_list
+                0x200001e4        0x4 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-mallocr.o)
+                0x200001e4                __malloc_free_list
  .bss.__malloc_sbrk_start
-                0x20000220        0x4 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-mallocr.o)
-                0x20000220                __malloc_sbrk_start
+                0x200001e8        0x4 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-mallocr.o)
+                0x200001e8                __malloc_sbrk_start
  *(COMMON)
- COMMON         0x20000224        0x4 ./system/src/newlib/_syscalls.o
-                0x20000224                errno
- COMMON         0x20000228        0x4 ./src/Timer.o
-                0x20000228                timer_delayCount
- COMMON         0x2000022c        0x9 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-lock.o)
-                0x2000022c                __lock___atexit_recursive_mutex
-                0x2000022d                __lock___arc4random_mutex
-                0x2000022e                __lock___env_recursive_mutex
-                0x2000022f                __lock___sinit_recursive_mutex
-                0x20000230                __lock___malloc_recursive_mutex
-                0x20000231                __lock___at_quick_exit_mutex
-                0x20000232                __lock___dd_hash_mutex
-                0x20000233                __lock___tz_mutex
-                0x20000234                __lock___sfp_recursive_mutex
+ COMMON         0x200001ec        0x4 ./system/src/newlib/_syscalls.o
+                0x200001ec                errno
+ COMMON         0x200001f0        0x4 ./src/Timer.o
+                0x200001f0                timer_delayCount
+ COMMON         0x200001f4        0x9 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-lock.o)
+                0x200001f4                __lock___atexit_recursive_mutex
+                0x200001f5                __lock___arc4random_mutex
+                0x200001f6                __lock___env_recursive_mutex
+                0x200001f7                __lock___sinit_recursive_mutex
+                0x200001f8                __lock___malloc_recursive_mutex
+                0x200001f9                __lock___at_quick_exit_mutex
+                0x200001fa                __lock___dd_hash_mutex
+                0x200001fb                __lock___tz_mutex
+                0x200001fc                __lock___sfp_recursive_mutex
  *(.bss_end .bss_end.*)
- *fill*         0x20000235        0x3 
- .bss_end       0x20000238        0x4 ./system/src/newlib/_startup.o
-                0x2000023c                . = ALIGN (0x4)
-                0x2000023c                __bss_end__ = .
-                0x2000023c                _ebss = .
+ *fill*         0x200001fd        0x3 
+ .bss_end       0x20000200        0x4 ./system/src/newlib/_startup.o
+                0x20000204                . = ALIGN (0x4)
+                0x20000204                __bss_end__ = .
+                0x20000204                _ebss = .
 
 .noinit_CCMRAM
  *(.noinit.CCMRAM .noinit.CCMRAM.*)
 
-.noinit         0x2000023c        0x0
-                0x2000023c                _noinit = .
+.noinit         0x20000204        0x0
+                0x20000204                _noinit = .
  *(.noinit .noinit.*)
-                0x2000023c                . = ALIGN (0x4)
-                0x2000023c                _end_noinit = .
+                0x20000204                . = ALIGN (0x4)
+                0x20000204                _end_noinit = .
                 [!provide]                PROVIDE (end = _end_noinit)
                 [!provide]                PROVIDE (_end = _end_noinit)
                 [!provide]                PROVIDE (__end = _end_noinit)
                 [!provide]                PROVIDE (__end__ = _end_noinit)
 
-._check_stack   0x2000023c      0x100
-                0x2000033c                . = (. + _Minimum_Stack_Size)
- *fill*         0x2000023c      0x100 
+._check_stack   0x20000204      0x100
+                0x20000304                . = (. + _Minimum_Stack_Size)
+ *fill*         0x20000204      0x100 
 
 .b1text
  *(.b1text)
@@ -5110,7 +5119,6 @@ END GROUP
  .comment       0x00000075       0x76 ./src/retarget.o
  .comment       0x00000075       0x76 ./src/stm32f10x_it.o
  .comment       0x00000075       0x76 ./io6Library/Ethernet/W6100/w6100.o
- .comment       0x00000075       0x76 ./io6Library/Ethernet/socket.o
  .comment       0x00000075       0x76 ./io6Library/Ethernet/wizchip_conf.o
 
 .ARM.attributes
@@ -5178,83 +5186,81 @@ END GROUP
  .ARM.attributes
                 0x00000546       0x2d ./io6Library/Ethernet/W6100/w6100.o
  .ARM.attributes
-                0x00000573       0x2d ./io6Library/Ethernet/socket.o
+                0x00000573       0x2d ./io6Library/Ethernet/wizchip_conf.o
  .ARM.attributes
-                0x000005a0       0x2d ./io6Library/Ethernet/wizchip_conf.o
+                0x000005a0       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-errno.o)
  .ARM.attributes
-                0x000005cd       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-errno.o)
+                0x000005cd       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-impure.o)
  .ARM.attributes
-                0x000005fa       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-impure.o)
+                0x000005fa       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-memcpy-stub.o)
  .ARM.attributes
-                0x00000627       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-memcpy-stub.o)
+                0x00000627       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-memset.o)
  .ARM.attributes
-                0x00000654       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-memset.o)
+                0x00000654       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-printf.o)
  .ARM.attributes
-                0x00000681       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-printf.o)
+                0x00000681       0x17 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-strlen.o)
  .ARM.attributes
-                0x000006ae       0x17 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-strlen.o)
+                0x00000698       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-vsnprintf.o)
  .ARM.attributes
-                0x000006c5       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-vsnprintf.o)
+                0x000006c5       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-findfp.o)
  .ARM.attributes
-                0x000006f2       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-findfp.o)
+                0x000006f2       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-fwalk.o)
  .ARM.attributes
-                0x0000071f       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-fwalk.o)
+                0x0000071f       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-lock.o)
  .ARM.attributes
-                0x0000074c       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-lock.o)
+                0x0000074c       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-freer.o)
  .ARM.attributes
-                0x00000779       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-freer.o)
+                0x00000779       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-mallocr.o)
  .ARM.attributes
-                0x000007a6       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-mallocr.o)
+                0x000007a6       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-svfprintf.o)
  .ARM.attributes
-                0x000007d3       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-svfprintf.o)
+                0x000007d3       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-vfprintf.o)
  .ARM.attributes
-                0x00000800       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-vfprintf.o)
+                0x00000800       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-vfprintf_i.o)
  .ARM.attributes
-                0x0000082d       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x0000082d       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-sbrkr.o)
  .ARM.attributes
-                0x0000085a       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-sbrkr.o)
+                0x0000085a       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-stdio.o)
  .ARM.attributes
-                0x00000887       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-stdio.o)
+                0x00000887       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-wbuf.o)
  .ARM.attributes
-                0x000008b4       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-wbuf.o)
+                0x000008b4       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-writer.o)
  .ARM.attributes
-                0x000008e1       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-writer.o)
+                0x000008e1       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-wsetup.o)
  .ARM.attributes
-                0x0000090e       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-wsetup.o)
+                0x0000090e       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-closer.o)
  .ARM.attributes
-                0x0000093b       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-closer.o)
+                0x0000093b       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-fflush.o)
  .ARM.attributes
-                0x00000968       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-fflush.o)
+                0x00000968       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-lseekr.o)
  .ARM.attributes
-                0x00000995       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-lseekr.o)
+                0x00000995       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-makebuf.o)
  .ARM.attributes
-                0x000009c2       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-makebuf.o)
+                0x000009c2       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-memchr-stub.o)
  .ARM.attributes
-                0x000009ef       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-memchr-stub.o)
+                0x000009ef       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-memmove.o)
  .ARM.attributes
-                0x00000a1c       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-memmove.o)
+                0x00000a1c       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-mlock.o)
  .ARM.attributes
-                0x00000a49       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-mlock.o)
+                0x00000a49       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-reallocr.o)
  .ARM.attributes
-                0x00000a76       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-reallocr.o)
+                0x00000a76       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-readr.o)
  .ARM.attributes
-                0x00000aa3       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-readr.o)
+                0x00000aa3       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-fstatr.o)
  .ARM.attributes
-                0x00000ad0       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-fstatr.o)
+                0x00000ad0       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-isattyr.o)
  .ARM.attributes
-                0x00000afd       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-isattyr.o)
+                0x00000afd       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-msizer.o)
  .ARM.attributes
-                0x00000b2a       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-msizer.o)
+                0x00000b2a       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(close.o)
  .ARM.attributes
-                0x00000b57       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(close.o)
+                0x00000b57       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(fstat.o)
  .ARM.attributes
-                0x00000b84       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(fstat.o)
+                0x00000b84       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(isatty.o)
  .ARM.attributes
-                0x00000bb1       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(isatty.o)
+                0x00000bb1       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(lseek.o)
  .ARM.attributes
-                0x00000bde       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(lseek.o)
- .ARM.attributes
-                0x00000c0b       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(read.o)
+                0x00000bde       0x2d c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(read.o)
 
 .debug
  *(.debug)
@@ -5268,7 +5274,7 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000      0xf38
+.debug_aranges  0x00000000      0xeb8
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0x40 ./system/src/stm32f1-stdperiph/misc.o
@@ -5333,14 +5339,12 @@ END GROUP
  .debug_aranges
                 0x00000d08       0x60 ./io6Library/Ethernet/W6100/w6100.o
  .debug_aranges
-                0x00000d68       0x80 ./io6Library/Ethernet/socket.o
- .debug_aranges
-                0x00000de8      0x150 ./io6Library/Ethernet/wizchip_conf.o
+                0x00000d68      0x150 ./io6Library/Ethernet/wizchip_conf.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000    0x1a189
+.debug_info     0x00000000    0x17e88
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x6a5 ./system/src/stm32f1-stdperiph/misc.o
  .debug_info    0x000006a5      0xce4 ./system/src/stm32f1-stdperiph/stm32f10x_gpio.o
@@ -5359,24 +5363,23 @@ END GROUP
  .debug_info    0x0000c5b2     0x127b ./system/src/cortexm/exception_handlers.o
  .debug_info    0x0000d82d      0x4e0 ./system/src/cmsis/system_stm32f10x.o
  .debug_info    0x0000dd0d       0xce ./system/src/cmsis/vectors_stm32f10x.o
- .debug_info    0x0000dddb     0x168b ./src/TFTP/tftp.o
- .debug_info    0x0000f466      0x302 ./src/PlatformHandler/gpioHandler.o
- .debug_info    0x0000f768      0x333 ./src/PlatformHandler/nvicHandler.o
- .debug_info    0x0000fa9b      0x14a ./src/PlatformHandler/rccHandler.o
- .debug_info    0x0000fbe5      0x2e0 ./src/PlatformHandler/spiHandler.o
- .debug_info    0x0000fec5      0x72d ./src/PlatformHandler/timerHandler.o
- .debug_info    0x000105f2      0x280 ./src/PlatformHandler/uartHandler.o
- .debug_info    0x00010872      0x2b6 ./src/BlinkLed.o
- .debug_info    0x00010b28      0x6de ./src/Timer.o
- .debug_info    0x00011206     0x17f2 ./src/W6100RelFunctions.o
- .debug_info    0x000129f8     0x15f1 ./src/main.o
- .debug_info    0x00013fe9      0xbd3 ./src/retarget.o
- .debug_info    0x00014bbc      0x673 ./src/stm32f10x_it.o
- .debug_info    0x0001522f      0x84d ./io6Library/Ethernet/W6100/w6100.o
- .debug_info    0x00015a7c     0x219a ./io6Library/Ethernet/socket.o
- .debug_info    0x00017c16     0x2573 ./io6Library/Ethernet/wizchip_conf.o
+ .debug_info    0x0000dddb     0x14ba ./src/TFTP/tftp.o
+ .debug_info    0x0000f295      0x302 ./src/PlatformHandler/gpioHandler.o
+ .debug_info    0x0000f597      0x333 ./src/PlatformHandler/nvicHandler.o
+ .debug_info    0x0000f8ca      0x14a ./src/PlatformHandler/rccHandler.o
+ .debug_info    0x0000fa14      0x2e0 ./src/PlatformHandler/spiHandler.o
+ .debug_info    0x0000fcf4      0x72d ./src/PlatformHandler/timerHandler.o
+ .debug_info    0x00010421      0x280 ./src/PlatformHandler/uartHandler.o
+ .debug_info    0x000106a1      0x2b6 ./src/BlinkLed.o
+ .debug_info    0x00010957      0x6de ./src/Timer.o
+ .debug_info    0x00011035     0x17ea ./src/W6100RelFunctions.o
+ .debug_info    0x0001281f     0x1663 ./src/main.o
+ .debug_info    0x00013e82      0xbd3 ./src/retarget.o
+ .debug_info    0x00014a55      0x673 ./src/stm32f10x_it.o
+ .debug_info    0x000150c8      0x84d ./io6Library/Ethernet/W6100/w6100.o
+ .debug_info    0x00015915     0x2573 ./io6Library/Ethernet/wizchip_conf.o
 
-.debug_abbrev   0x00000000     0x453c
+.debug_abbrev   0x00000000     0x41dc
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x1bc ./system/src/stm32f1-stdperiph/misc.o
  .debug_abbrev  0x000001bc      0x24b ./system/src/stm32f1-stdperiph/stm32f10x_gpio.o
@@ -5395,24 +5398,23 @@ END GROUP
  .debug_abbrev  0x00001d3f      0x372 ./system/src/cortexm/exception_handlers.o
  .debug_abbrev  0x000020b1      0x19d ./system/src/cmsis/system_stm32f10x.o
  .debug_abbrev  0x0000224e       0xa5 ./system/src/cmsis/vectors_stm32f10x.o
- .debug_abbrev  0x000022f3      0x355 ./src/TFTP/tftp.o
- .debug_abbrev  0x00002648      0x149 ./src/PlatformHandler/gpioHandler.o
- .debug_abbrev  0x00002791      0x136 ./src/PlatformHandler/nvicHandler.o
- .debug_abbrev  0x000028c7       0xd8 ./src/PlatformHandler/rccHandler.o
- .debug_abbrev  0x0000299f      0x149 ./src/PlatformHandler/spiHandler.o
- .debug_abbrev  0x00002ae8      0x1db ./src/PlatformHandler/timerHandler.o
- .debug_abbrev  0x00002cc3      0x149 ./src/PlatformHandler/uartHandler.o
- .debug_abbrev  0x00002e0c      0x187 ./src/BlinkLed.o
- .debug_abbrev  0x00002f93      0x1f1 ./src/Timer.o
- .debug_abbrev  0x00003184      0x34f ./src/W6100RelFunctions.o
- .debug_abbrev  0x000034d3      0x37e ./src/main.o
- .debug_abbrev  0x00003851      0x286 ./src/retarget.o
- .debug_abbrev  0x00003ad7      0x168 ./src/stm32f10x_it.o
- .debug_abbrev  0x00003c3f      0x220 ./io6Library/Ethernet/W6100/w6100.o
- .debug_abbrev  0x00003e5f      0x38b ./io6Library/Ethernet/socket.o
- .debug_abbrev  0x000041ea      0x352 ./io6Library/Ethernet/wizchip_conf.o
+ .debug_abbrev  0x000022f3      0x377 ./src/TFTP/tftp.o
+ .debug_abbrev  0x0000266a      0x149 ./src/PlatformHandler/gpioHandler.o
+ .debug_abbrev  0x000027b3      0x136 ./src/PlatformHandler/nvicHandler.o
+ .debug_abbrev  0x000028e9       0xd8 ./src/PlatformHandler/rccHandler.o
+ .debug_abbrev  0x000029c1      0x149 ./src/PlatformHandler/spiHandler.o
+ .debug_abbrev  0x00002b0a      0x1db ./src/PlatformHandler/timerHandler.o
+ .debug_abbrev  0x00002ce5      0x149 ./src/PlatformHandler/uartHandler.o
+ .debug_abbrev  0x00002e2e      0x187 ./src/BlinkLed.o
+ .debug_abbrev  0x00002fb5      0x1f1 ./src/Timer.o
+ .debug_abbrev  0x000031a6      0x34f ./src/W6100RelFunctions.o
+ .debug_abbrev  0x000034f5      0x387 ./src/main.o
+ .debug_abbrev  0x0000387c      0x286 ./src/retarget.o
+ .debug_abbrev  0x00003b02      0x168 ./src/stm32f10x_it.o
+ .debug_abbrev  0x00003c6a      0x220 ./io6Library/Ethernet/W6100/w6100.o
+ .debug_abbrev  0x00003e8a      0x352 ./io6Library/Ethernet/wizchip_conf.o
 
-.debug_line     0x00000000    0x12213
+.debug_line     0x00000000    0x10ce1
  *(.debug_line)
  .debug_line    0x00000000      0x51d ./system/src/stm32f1-stdperiph/misc.o
  .debug_line    0x0000051d      0xcf1 ./system/src/stm32f1-stdperiph/stm32f10x_gpio.o
@@ -5431,24 +5433,23 @@ END GROUP
  .debug_line    0x00009b1a      0x8c3 ./system/src/cortexm/exception_handlers.o
  .debug_line    0x0000a3dd      0x598 ./system/src/cmsis/system_stm32f10x.o
  .debug_line    0x0000a975      0x118 ./system/src/cmsis/vectors_stm32f10x.o
- .debug_line    0x0000aa8d      0x7ae ./src/TFTP/tftp.o
- .debug_line    0x0000b23b      0x40b ./src/PlatformHandler/gpioHandler.o
- .debug_line    0x0000b646      0x389 ./src/PlatformHandler/nvicHandler.o
- .debug_line    0x0000b9cf      0x365 ./src/PlatformHandler/rccHandler.o
- .debug_line    0x0000bd34      0x3ad ./src/PlatformHandler/spiHandler.o
- .debug_line    0x0000c0e1      0x655 ./src/PlatformHandler/timerHandler.o
- .debug_line    0x0000c736      0x397 ./src/PlatformHandler/uartHandler.o
- .debug_line    0x0000cacd      0x378 ./src/BlinkLed.o
- .debug_line    0x0000ce45      0x44b ./src/Timer.o
- .debug_line    0x0000d290      0xa79 ./src/W6100RelFunctions.o
- .debug_line    0x0000dd09      0xb03 ./src/main.o
- .debug_line    0x0000e80c      0x63f ./src/retarget.o
- .debug_line    0x0000ee4b      0x7ea ./src/stm32f10x_it.o
- .debug_line    0x0000f635      0x521 ./io6Library/Ethernet/W6100/w6100.o
- .debug_line    0x0000fb56     0x14e5 ./io6Library/Ethernet/socket.o
- .debug_line    0x0001103b     0x11d8 ./io6Library/Ethernet/wizchip_conf.o
+ .debug_line    0x0000aa8d      0x724 ./src/TFTP/tftp.o
+ .debug_line    0x0000b1b1      0x40b ./src/PlatformHandler/gpioHandler.o
+ .debug_line    0x0000b5bc      0x387 ./src/PlatformHandler/nvicHandler.o
+ .debug_line    0x0000b943      0x365 ./src/PlatformHandler/rccHandler.o
+ .debug_line    0x0000bca8      0x3ad ./src/PlatformHandler/spiHandler.o
+ .debug_line    0x0000c055      0x655 ./src/PlatformHandler/timerHandler.o
+ .debug_line    0x0000c6aa      0x397 ./src/PlatformHandler/uartHandler.o
+ .debug_line    0x0000ca41      0x3d9 ./src/BlinkLed.o
+ .debug_line    0x0000ce1a      0x44b ./src/Timer.o
+ .debug_line    0x0000d265      0xa70 ./src/W6100RelFunctions.o
+ .debug_line    0x0000dcd5      0xaea ./src/main.o
+ .debug_line    0x0000e7bf      0x63f ./src/retarget.o
+ .debug_line    0x0000edfe      0x7ea ./src/stm32f10x_it.o
+ .debug_line    0x0000f5e8      0x521 ./io6Library/Ethernet/W6100/w6100.o
+ .debug_line    0x0000fb09     0x11d8 ./io6Library/Ethernet/wizchip_conf.o
 
-.debug_frame    0x00000000     0x32b8
+.debug_frame    0x00000000     0x302c
  *(.debug_frame)
  .debug_frame   0x00000000       0x90 ./system/src/stm32f1-stdperiph/misc.o
  .debug_frame   0x00000090      0x1e8 ./system/src/stm32f1-stdperiph/stm32f10x_gpio.o
@@ -5467,59 +5468,58 @@ END GROUP
  .debug_frame   0x000017c4      0x158 ./system/src/cortexm/exception_handlers.o
  .debug_frame   0x0000191c       0x6c ./system/src/cmsis/system_stm32f10x.o
  .debug_frame   0x00001988       0x20 ./system/src/cmsis/vectors_stm32f10x.o
- .debug_frame   0x000019a8       0x68 ./src/TFTP/tftp.o
- .debug_frame   0x00001a10       0x38 ./src/PlatformHandler/gpioHandler.o
- .debug_frame   0x00001a48       0x2c ./src/PlatformHandler/nvicHandler.o
- .debug_frame   0x00001a74       0x28 ./src/PlatformHandler/rccHandler.o
- .debug_frame   0x00001a9c       0x30 ./src/PlatformHandler/spiHandler.o
- .debug_frame   0x00001acc      0x11c ./src/PlatformHandler/timerHandler.o
- .debug_frame   0x00001be8       0x30 ./src/PlatformHandler/uartHandler.o
- .debug_frame   0x00001c18       0x30 ./src/BlinkLed.o
- .debug_frame   0x00001c48       0x58 ./src/Timer.o
- .debug_frame   0x00001ca0      0x168 ./src/W6100RelFunctions.o
- .debug_frame   0x00001e08       0x64 ./src/main.o
- .debug_frame   0x00001e6c       0x48 ./src/retarget.o
- .debug_frame   0x00001eb4      0x2a8 ./src/stm32f10x_it.o
- .debug_frame   0x0000215c      0x140 ./io6Library/Ethernet/W6100/w6100.o
- .debug_frame   0x0000229c      0x274 ./io6Library/Ethernet/socket.o
- .debug_frame   0x00002510      0x3d4 ./io6Library/Ethernet/wizchip_conf.o
- .debug_frame   0x000028e4       0x20 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-errno.o)
- .debug_frame   0x00002904       0x28 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-memcpy-stub.o)
- .debug_frame   0x0000292c       0x20 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-memset.o)
- .debug_frame   0x0000294c       0x74 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-printf.o)
- .debug_frame   0x000029c0       0x4c c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-vsnprintf.o)
- .debug_frame   0x00002a0c      0x14c c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-findfp.o)
- .debug_frame   0x00002b58       0x54 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-fwalk.o)
- .debug_frame   0x00002bac       0xb0 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-lock.o)
- .debug_frame   0x00002c5c       0x38 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-freer.o)
- .debug_frame   0x00002c94       0x30 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-mallocr.o)
- .debug_frame   0x00002cc4       0x90 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-svfprintf.o)
- .debug_frame   0x00002d54       0xac c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-vfprintf.o)
- .debug_frame   0x00002e00       0x60 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-vfprintf_i.o)
- .debug_frame   0x00002e60       0x2c c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-sbrkr.o)
- .debug_frame   0x00002e8c       0x88 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-stdio.o)
- .debug_frame   0x00002f14       0x40 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-wbuf.o)
- .debug_frame   0x00002f54       0x2c c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-writer.o)
- .debug_frame   0x00002f80       0x2c c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-wsetup.o)
- .debug_frame   0x00002fac       0x2c c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-closer.o)
- .debug_frame   0x00002fd8       0x5c c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-fflush.o)
- .debug_frame   0x00003034       0x2c c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-lseekr.o)
- .debug_frame   0x00003060       0x58 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-makebuf.o)
- .debug_frame   0x000030b8       0x28 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-memchr-stub.o)
- .debug_frame   0x000030e0       0x28 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-memmove.o)
- .debug_frame   0x00003108       0x30 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-mlock.o)
- .debug_frame   0x00003138       0x3c c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-reallocr.o)
- .debug_frame   0x00003174       0x2c c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-readr.o)
- .debug_frame   0x000031a0       0x2c c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-fstatr.o)
- .debug_frame   0x000031cc       0x2c c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-isattyr.o)
- .debug_frame   0x000031f8       0x20 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-msizer.o)
- .debug_frame   0x00003218       0x20 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(close.o)
- .debug_frame   0x00003238       0x20 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(fstat.o)
- .debug_frame   0x00003258       0x20 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(isatty.o)
- .debug_frame   0x00003278       0x20 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(lseek.o)
- .debug_frame   0x00003298       0x20 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(read.o)
+ .debug_frame   0x000019a8       0x50 ./src/TFTP/tftp.o
+ .debug_frame   0x000019f8       0x38 ./src/PlatformHandler/gpioHandler.o
+ .debug_frame   0x00001a30       0x2c ./src/PlatformHandler/nvicHandler.o
+ .debug_frame   0x00001a5c       0x28 ./src/PlatformHandler/rccHandler.o
+ .debug_frame   0x00001a84       0x30 ./src/PlatformHandler/spiHandler.o
+ .debug_frame   0x00001ab4      0x11c ./src/PlatformHandler/timerHandler.o
+ .debug_frame   0x00001bd0       0x30 ./src/PlatformHandler/uartHandler.o
+ .debug_frame   0x00001c00       0x30 ./src/BlinkLed.o
+ .debug_frame   0x00001c30       0x58 ./src/Timer.o
+ .debug_frame   0x00001c88      0x168 ./src/W6100RelFunctions.o
+ .debug_frame   0x00001df0       0x64 ./src/main.o
+ .debug_frame   0x00001e54       0x48 ./src/retarget.o
+ .debug_frame   0x00001e9c      0x2a8 ./src/stm32f10x_it.o
+ .debug_frame   0x00002144      0x140 ./io6Library/Ethernet/W6100/w6100.o
+ .debug_frame   0x00002284      0x3d4 ./io6Library/Ethernet/wizchip_conf.o
+ .debug_frame   0x00002658       0x20 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-errno.o)
+ .debug_frame   0x00002678       0x28 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-memcpy-stub.o)
+ .debug_frame   0x000026a0       0x20 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-memset.o)
+ .debug_frame   0x000026c0       0x74 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-printf.o)
+ .debug_frame   0x00002734       0x4c c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-vsnprintf.o)
+ .debug_frame   0x00002780      0x14c c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-findfp.o)
+ .debug_frame   0x000028cc       0x54 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-fwalk.o)
+ .debug_frame   0x00002920       0xb0 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-lock.o)
+ .debug_frame   0x000029d0       0x38 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-freer.o)
+ .debug_frame   0x00002a08       0x30 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-mallocr.o)
+ .debug_frame   0x00002a38       0x90 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-svfprintf.o)
+ .debug_frame   0x00002ac8       0xac c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-vfprintf.o)
+ .debug_frame   0x00002b74       0x60 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-vfprintf_i.o)
+ .debug_frame   0x00002bd4       0x2c c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-sbrkr.o)
+ .debug_frame   0x00002c00       0x88 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-stdio.o)
+ .debug_frame   0x00002c88       0x40 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-wbuf.o)
+ .debug_frame   0x00002cc8       0x2c c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-writer.o)
+ .debug_frame   0x00002cf4       0x2c c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-wsetup.o)
+ .debug_frame   0x00002d20       0x2c c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-closer.o)
+ .debug_frame   0x00002d4c       0x5c c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-fflush.o)
+ .debug_frame   0x00002da8       0x2c c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-lseekr.o)
+ .debug_frame   0x00002dd4       0x58 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-makebuf.o)
+ .debug_frame   0x00002e2c       0x28 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-memchr-stub.o)
+ .debug_frame   0x00002e54       0x28 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-memmove.o)
+ .debug_frame   0x00002e7c       0x30 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-mlock.o)
+ .debug_frame   0x00002eac       0x3c c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-reallocr.o)
+ .debug_frame   0x00002ee8       0x2c c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-readr.o)
+ .debug_frame   0x00002f14       0x2c c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-fstatr.o)
+ .debug_frame   0x00002f40       0x2c c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-isattyr.o)
+ .debug_frame   0x00002f6c       0x20 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-msizer.o)
+ .debug_frame   0x00002f8c       0x20 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(close.o)
+ .debug_frame   0x00002fac       0x20 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(fstat.o)
+ .debug_frame   0x00002fcc       0x20 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(isatty.o)
+ .debug_frame   0x00002fec       0x20 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(lseek.o)
+ .debug_frame   0x0000300c       0x20 c:/program files (x86)/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(read.o)
 
-.debug_str      0x00000000    0x6187b
+.debug_str      0x00000000    0x612b9
  *(.debug_str)
  .debug_str     0x00000000    0x4ed87 ./system/src/stm32f1-stdperiph/misc.o
                               0x4ef0b (size before relaxing)
@@ -5555,40 +5555,38 @@ END GROUP
                               0x4ee0d (size before relaxing)
  .debug_str     0x00058d2d       0x57 ./system/src/cmsis/vectors_stm32f10x.o
                                0x398f (size before relaxing)
- .debug_str     0x00058d84     0x642d ./src/TFTP/tftp.o
+ .debug_str     0x00058d84     0x6434 ./src/TFTP/tftp.o
                                0xe3a1 (size before relaxing)
- .debug_str     0x0005f1b1      0x3a6 ./src/PlatformHandler/gpioHandler.o
+ .debug_str     0x0005f1b8      0x3a6 ./src/PlatformHandler/gpioHandler.o
                               0x4f13a (size before relaxing)
- .debug_str     0x0005f557      0x414 ./src/PlatformHandler/nvicHandler.o
+ .debug_str     0x0005f55e      0x414 ./src/PlatformHandler/nvicHandler.o
                               0x4f138 (size before relaxing)
- .debug_str     0x0005f96b       0x55 ./src/PlatformHandler/rccHandler.o
+ .debug_str     0x0005f972       0x55 ./src/PlatformHandler/rccHandler.o
                               0x4ed0c (size before relaxing)
- .debug_str     0x0005f9c0       0x67 ./src/PlatformHandler/spiHandler.o
+ .debug_str     0x0005f9c7       0x67 ./src/PlatformHandler/spiHandler.o
                               0x4edff (size before relaxing)
- .debug_str     0x0005fa27      0x2c8 ./src/PlatformHandler/timerHandler.o
+ .debug_str     0x0005fa2e      0x2c8 ./src/PlatformHandler/timerHandler.o
                               0x4f149 (size before relaxing)
- .debug_str     0x0005fcef       0x7f ./src/PlatformHandler/uartHandler.o
+ .debug_str     0x0005fcf6       0x7f ./src/PlatformHandler/uartHandler.o
                               0x4eddc (size before relaxing)
- .debug_str     0x0005fd6e       0x2f ./src/BlinkLed.o
+ .debug_str     0x0005fd75       0x2f ./src/BlinkLed.o
                               0x4eef6 (size before relaxing)
- .debug_str     0x0005fd9d       0xa6 ./src/Timer.o
+ .debug_str     0x0005fda4       0xa6 ./src/Timer.o
                               0x4f20c (size before relaxing)
- .debug_str     0x0005fe43      0x582 ./src/W6100RelFunctions.o
-                              0x5969c (size before relaxing)
- .debug_str     0x000603c5      0x392 ./src/main.o
-                              0x5a5be (size before relaxing)
- .debug_str     0x00060757       0x77 ./src/retarget.o
+ .debug_str     0x0005fe4a      0x582 ./src/W6100RelFunctions.o
+                              0x596a4 (size before relaxing)
+ .debug_str     0x000603cc      0x3d2 ./src/main.o
+                              0x5a5fe (size before relaxing)
+ .debug_str     0x0006079e       0x77 ./src/retarget.o
                               0x538a9 (size before relaxing)
- .debug_str     0x000607ce      0x343 ./src/stm32f10x_it.o
+ .debug_str     0x00060815      0x343 ./src/stm32f10x_it.o
                               0x4f11f (size before relaxing)
- .debug_str     0x00060b11      0x17a ./io6Library/Ethernet/W6100/w6100.o
+ .debug_str     0x00060b58      0x17a ./io6Library/Ethernet/W6100/w6100.o
                                0x94f3 (size before relaxing)
- .debug_str     0x00060c8b      0x62c ./io6Library/Ethernet/socket.o
-                               0xe61e (size before relaxing)
- .debug_str     0x000612b7      0x5c4 ./io6Library/Ethernet/wizchip_conf.o
+ .debug_str     0x00060cd2      0x5e7 ./io6Library/Ethernet/wizchip_conf.o
                                0xa0ec (size before relaxing)
 
-.debug_loc      0x00000000     0xa535
+.debug_loc      0x00000000     0x8bf1
  *(.debug_loc)
  .debug_loc     0x00000000      0x26d ./system/src/stm32f1-stdperiph/misc.o
  .debug_loc     0x0000026d      0x9f6 ./system/src/stm32f1-stdperiph/stm32f10x_gpio.o
@@ -5605,14 +5603,13 @@ END GROUP
  .debug_loc     0x000063cd      0x1a1 ./system/src/diag/trace_impl.o
  .debug_loc     0x0000656e      0x35c ./system/src/cortexm/exception_handlers.o
  .debug_loc     0x000068ca       0xff ./system/src/cmsis/system_stm32f10x.o
- .debug_loc     0x000069c9      0x48d ./src/TFTP/tftp.o
- .debug_loc     0x00006e56       0x63 ./src/Timer.o
- .debug_loc     0x00006eb9      0x2bd ./src/W6100RelFunctions.o
- .debug_loc     0x00007176       0x91 ./src/main.o
- .debug_loc     0x00007207       0xf0 ./src/retarget.o
- .debug_loc     0x000072f7      0x54a ./io6Library/Ethernet/W6100/w6100.o
- .debug_loc     0x00007841     0x1889 ./io6Library/Ethernet/socket.o
- .debug_loc     0x000090ca     0x146b ./io6Library/Ethernet/wizchip_conf.o
+ .debug_loc     0x000069c9      0x3d2 ./src/TFTP/tftp.o
+ .debug_loc     0x00006d9b       0x63 ./src/Timer.o
+ .debug_loc     0x00006dfe      0x2bd ./src/W6100RelFunctions.o
+ .debug_loc     0x000070bb       0x91 ./src/main.o
+ .debug_loc     0x0000714c       0xf0 ./src/retarget.o
+ .debug_loc     0x0000723c      0x54a ./io6Library/Ethernet/W6100/w6100.o
+ .debug_loc     0x00007786     0x146b ./io6Library/Ethernet/wizchip_conf.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -5630,7 +5627,7 @@ END GROUP
  *(.debug_varnames)
 OUTPUT(W6100-evb-gcc-eclipse-tftps-simple.elf elf32-littlearm)
 
-.debug_ranges   0x00000000      0xe48
+.debug_ranges   0x00000000      0xd18
  .debug_ranges  0x00000000       0x30 ./system/src/stm32f1-stdperiph/misc.o
  .debug_ranges  0x00000030       0x98 ./system/src/stm32f1-stdperiph/stm32f10x_gpio.o
  .debug_ranges  0x000000c8      0x108 ./system/src/stm32f1-stdperiph/stm32f10x_rcc.o
@@ -5662,10 +5659,9 @@ OUTPUT(W6100-evb-gcc-eclipse-tftps-simple.elf elf32-littlearm)
  .debug_ranges  0x00000a20       0x18 ./src/retarget.o
  .debug_ranges  0x00000a38      0x150 ./src/stm32f10x_it.o
  .debug_ranges  0x00000b88       0x50 ./io6Library/Ethernet/W6100/w6100.o
- .debug_ranges  0x00000bd8      0x130 ./io6Library/Ethernet/socket.o
- .debug_ranges  0x00000d08      0x140 ./io6Library/Ethernet/wizchip_conf.o
+ .debug_ranges  0x00000bd8      0x140 ./io6Library/Ethernet/wizchip_conf.o
 
-.debug_macro    0x00000000    0x13d21
+.debug_macro    0x00000000    0x13afd
  .debug_macro   0x00000000      0x171 ./system/src/stm32f1-stdperiph/misc.o
  .debug_macro   0x00000171      0xaa8 ./system/src/stm32f1-stdperiph/misc.o
  .debug_macro   0x00000c19       0x50 ./system/src/stm32f1-stdperiph/misc.o
@@ -5786,5 +5782,4 @@ OUTPUT(W6100-evb-gcc-eclipse-tftps-simple.elf elf32-littlearm)
  .debug_macro   0x000138a5       0x16 ./src/retarget.o
  .debug_macro   0x000138bb      0x175 ./src/stm32f10x_it.o
  .debug_macro   0x00013a30       0x6e ./io6Library/Ethernet/W6100/w6100.o
- .debug_macro   0x00013a9e      0x224 ./io6Library/Ethernet/socket.o
- .debug_macro   0x00013cc2       0x5f ./io6Library/Ethernet/wizchip_conf.o
+ .debug_macro   0x00013a9e       0x5f ./io6Library/Ethernet/wizchip_conf.o

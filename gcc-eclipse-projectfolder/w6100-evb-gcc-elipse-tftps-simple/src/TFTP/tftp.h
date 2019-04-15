@@ -77,20 +77,20 @@ extern int dbg_level;
 
 /* typedef */ 
 typedef struct tftp_data {
-	uint16_t opcode;
-	uint16_t block_num;
-	uint8_t data[0];
+    uint16_t opcode;
+    uint16_t block_num;
+    uint8_t data[0];
 } TFTP_DATA_T;
 
 typedef struct tftp_error {
-	uint16_t opcode;
-	uint16_t error_code;
-	uint8_t error_msg[0];
+    uint16_t opcode;
+    uint16_t error_code;
+    uint8_t error_msg[0];
 } TFTP_ERROR_T;
 
 typedef struct tftp_option {
-	uint8_t *name;
-	uint8_t *value;
+    uint8_t *name;
+    uint8_t *value;
 } TFTP_OPTION;
 
 /* Functions */
@@ -101,7 +101,6 @@ typedef struct tftp_option {
 //void tftp_timeout_handler(void);
 
 void tftpc(uint8_t sn, uint8_t *server_ip, uint8_t *filename, uint8_t ip_mode);
-void tftps(uint8_t sn, uint8_t ip_mode);
 
 #ifdef __cplusplus
 }
