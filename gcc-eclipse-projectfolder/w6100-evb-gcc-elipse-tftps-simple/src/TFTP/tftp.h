@@ -101,6 +101,9 @@ typedef struct tftp_option {
 //void tftp_timeout_handler(void);
 
 void tftpc(uint8_t sn, uint8_t *server_ip, uint8_t *filename, uint8_t ip_mode);
+void tftps(uint8_t sn, uint8_t ip_mode);
+uint8_t digittostr(uint32_t intval, uint8_t* strbuf);
+void initfilebuf(void);
 
 #ifdef __cplusplus
 }

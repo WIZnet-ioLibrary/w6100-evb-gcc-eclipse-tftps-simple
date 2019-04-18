@@ -164,6 +164,7 @@ uint16_t pack_size = 0;
 void delay(unsigned int);
 void print_network_information(void);
 
+
 int
 main(int argc, char* argv[])
 {
@@ -196,7 +197,7 @@ main(int argc, char* argv[])
                         0xc1, 0x0b, 0x0a, 0xdf,
                         0xea, 0xf4, 0xf4, 0x2d};
 
-    uint16_t version;
+    uint16_t version, i;
     uint8_t phylink;
 
 #if _WIZCHIP_IO_MODE_ & _WIZCHIP_IO_MODE_SPI_
@@ -246,12 +247,14 @@ main(int argc, char* argv[])
 
     uint8_t is_off = 1;
 
+    initfilebuf();
+
     while (1)
     {
         int tmpTime;
 
         tftps(0, AS_IPV4);
-        tftps(1, AS_IPV6);
+//        tftps(1, AS_IPV6);
     }
   // Infinite loop, never return.
 }
