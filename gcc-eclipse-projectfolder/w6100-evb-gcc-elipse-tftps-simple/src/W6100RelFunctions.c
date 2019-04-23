@@ -210,3 +210,18 @@ void W6100Reset(void)
 //	CoTickDelay(10);
 //	GPIO_SetBits(RSTn_PORT, RSTn_PIN);
 }
+
+uint8_t* get_mode_message(uint8_t ip_mode)
+{
+    if(ip_mode == AS_IPV4)
+    {
+        return (uint8_t *)mode_v4;
+    }else if(ip_mode == AS_IPV6)
+    {
+        return (uint8_t *)mode_v6;
+    }else
+    {
+        return (uint8_t *)mode_dual;
+    }
+
+}

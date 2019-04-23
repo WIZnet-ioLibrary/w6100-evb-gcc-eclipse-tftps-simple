@@ -4,6 +4,9 @@
 #include "wizchip_conf.h"
 
 
+#define mode_dual   "Dual IP mode"
+#define mode_v4     "IPv4 mode"
+#define mode_v6     "IPv6 mode"
 
 //#define DMA
 
@@ -40,4 +43,5 @@ void W6100Initialze(void);
 //todo for test
 void register_read(void);
 void socket_register_read(uint8_t sn);
+uint8_t* get_mode_message(uint8_t ip_mode);
 #endif

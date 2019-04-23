@@ -70,9 +70,6 @@ extern int dbg_level;
 #define FILE_NAME_SIZE			20
 
 
-#define mode_dual	"Dual IP mode"
-#define mode_v4		"IPv4 mode"
-#define mode_v6		"IPv6 mode"
 //#define __TFTP_DEBUG__
 
 /* typedef */ 
@@ -105,6 +102,14 @@ void tftps(uint8_t sn, uint8_t ip_mode);
 uint8_t digittostr(uint32_t intval, uint8_t* strbuf);
 void initfilebuf(void);
 
+uint16_t send_rrq(uint8_t * buf, uint8_t* filename, uint8_t sn, uint8_t* server_ip, uint8_t ip_mode);
+uint16_t send_oack(uint8_t * buf, uint8_t sn, uint8_t ip_mode, uint8_t* destip, uint16_t destport);
+uint16_t send_data(uint8_t * buf, uint8_t sn, uint8_t ip_mode, uint8_t* destip, uint16_t destport);
+uint16_t proc_rrq(uint8_t * buf, uint16_t buf_size, uint8_t sn, uint8_t ip_mode, uint8_t* destip, uint16_t destport);
+uint16_t proc_data(uint8_t * buf, uint8_t sn, uint8_t ip_mode, uint8_t* destip, uint16_t destport);
+uint16_t proc_oack(uint8_t * buf, uint16_t buf_len, uint8_t sn, uint8_t ip_mode, uint8_t* destip, uint16_t destport);
+uint16_t packetsend(uint8_t sn, uint8_t* buf, uint16_t buf_size, uint8_t* destip, uint16_t destport, uint8_t ip_mode);
+uint16_t socketcreate(uint8_t sn, uint16_t src_port, uint8_t ip_mode);
 #ifdef __cplusplus
 }
 #endif
