@@ -248,10 +248,7 @@ void tftps(uint8_t sn, uint8_t ip_mode)
 
                 if(ret < 0)
                     return;
-                printf("buf: ");
-                for(i=0; i<ret; i++)
-                    printf("%02X ", buf[i]);
-                printf("\r\n");
+
                 current_opcode = ntohs(*(uint16_t *)buf);
                 remained_bytes = ret - 2;
                 if(current_opcode == TFTP_RRQ)
@@ -266,13 +263,13 @@ void tftps(uint8_t sn, uint8_t ip_mode)
                     datasize_t nextpos;
                     nextpos = 2;
                     filename = (uint8_t *)(buf + nextpos);
-                    printf("buf addr: %08X\r\n", buf);
-                    printf("index: %d, filename addr: %08X, filename : %s\r\n", index, filename, (char *)filename);
+//                    printf("buf addr: %08X\r\n", buf);
+//                    printf("index: %d, filename addr: %08X, filename : %s\r\n", index, filename, (char *)filename);
                     nextpos = strlen(filename) + 1;
                     remained_bytes -= nextpos;
                     //type
                     file_type = filename + nextpos;
-                    printf("index: %d, filetype addr: %08X, filetype: %s\r\n", index, file_type, (char *)file_type);
+//                    printf("index: %d, filetype addr: %08X, filetype: %s\r\n", index, file_type, (char *)file_type);
                     nextpos = strlen(file_type) + 1;
                     remained_bytes -= nextpos;
                     //option
@@ -330,17 +327,14 @@ void tftps(uint8_t sn, uint8_t ip_mode)
 
                 if(ret < 0)
                     return;
-                printf("buf: ");
-                for(i=0; i<ret; i++)
-                    printf("%02X ", buf[i]);
-                printf("\r\n");
                 current_opcode = ntohs(*(uint16_t *)buf);
                 remained_bytes = ret - 2;
 
                 if(current_opcode == TFTP_ACK)
                 {
-                    printf("ACK received\r\n");
                     uint16_t tmp_block_num = ntohs(*(uint16_t *)(buf + 2));
+                    printf("ACK with block num %d received\r\n", tmp_block_num);
+
                     if(tmp_block_num != 0)
                         if(g_is_last_block)
                         {
@@ -406,19 +400,18 @@ uint8_t digittostr(uint32_t intval, uint8_t* strbuf)
     uint32_t tmp;
     uint8_t depth;
 
-    printf("intval : %d\r\n", intval);
 
     if((tmp = (intval / 10)) > 0)
     {
         depth = digittostr(tmp, strbuf);
         depth++;
         *(strbuf + depth) = (intval % 10) + '0';
-        printf("[1]%c\r\n", (intval % 10) + '0');
+//        printf("[1]%c\r\n", (intval % 10) + '0');
         return depth;
     }else
     {
         *strbuf = (intval % 10) + '0';
-        printf("[2]%c\r\n", (intval % 10) + '0');
+//        printf("[2]%c\r\n", (intval % 10) + '0');
         return 0;
     }
 }
